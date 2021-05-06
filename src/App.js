@@ -1,7 +1,7 @@
 import Header from './components/Header'
-import React from 'react';
+import TopBar from './components/TopBar'
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import { blue, green, purple } from '@material-ui/core/colors'
+import { blue, purple } from '@material-ui/core/colors'
 
 const custom_theme = createMuiTheme({
   palette: {
@@ -14,6 +14,18 @@ const custom_theme = createMuiTheme({
   },
   typography: {
     fontSize: 20,
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
   },
 })
 
@@ -21,6 +33,7 @@ function App() {
   return (
     <div className='container'>
       <ThemeProvider theme = {custom_theme}>
+        <TopBar />
         <Header />
       </ThemeProvider>
     </div>
