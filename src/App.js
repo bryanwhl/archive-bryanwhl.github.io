@@ -31,7 +31,7 @@ const custom_theme = createMuiTheme({
 
 function App() {
   return (
-    <div className='container'>
+    <div className='container' width="fluid">
       <ThemeProvider theme = {custom_theme}>
         <TopBar />
         <Header />
