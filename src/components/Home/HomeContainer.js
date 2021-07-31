@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
   portfolioCards: {
     margin: 16,
+    padding: theme.spacing(2),
+    width: theme.spacing(46),
+    height: theme.spacing(46),
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between"
@@ -47,25 +50,52 @@ const HomeContainer = () => {
             <Box mt={12} display="flex" justifyContent="center">
               <Divider className={classes.divider} />
             </Box>
-            <Grid container direction="row" alignItems="stretch" justify="space-between">
-              <Grid item justify="center" xs={12}>
-                <Box mt={12} mb={6} display="flex" justifyContent="center">
-                  <Typography variant="h1">
-                    Projects
-                  </Typography>
-                </Box>
+            <Box mt={12} mb={6} display="flex" justifyContent="center">
+              <Typography variant="h1">
+                Projects
+              </Typography>
+            </Box>
+            <Grid container direction="row" justify="space-around">
+              <Grid item align="center" xs={12} md={6} lg={4}>
+                <Card className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
+                  <CardContent>
+                    <Typography color="textSecondary" gutterBottom>
+                      Card C
+                    </Typography>
+                    <Typography variant="h5" component="h2">
+                      Long content
+                    </Typography>
+                    <Typography component="p">
+                      I have quite a lot to say and as a result I am quite tall, but the
+                      other cards heights stretch with me
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">Learn More</Button>
+                  </CardActions>
+                </Card>
               </Grid>
-              <Grid item display="flex" xs={6}>
-                <Card square className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
+              <Grid item align="center" xs={12} md={6} lg={4}>
+                <Card className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
                   xs=6
                 </Card>
               </Grid>
-              <Grid item display="flex" xs={6}>
-                <Card square className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
+              <Grid item align="center" xs={12} md={6} lg={4}>
+                <Card className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
+                  xs=6
+                </Card>
+              </Grid>
+              <Grid item align="center" xs={12} md={6} lg={4}>
+                <Card className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
                   xs=6
                 </Card>
               </Grid>
             </Grid>
+            <Box mt={12} mb={6} display="flex" justifyContent="center">
+              <Typography variant="h1">
+                Projects
+              </Typography>
+            </Box>
           </Paper>
         </Box>
       </Container>
