@@ -1,13 +1,20 @@
 import React from 'react'
-import Image from "material-ui-image";
 import BackgroundImage from "../../images/background2.jpg"
-import { Card, CardContent, Grid, Paper, Typography, CardActions, Button, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import PetSocialImage from "../../images/pet-social-image.png"
+import PetSocialLogo from "../../images/pet-social-logo.jpg"
+import DSOLogo from "../../images/dso-logo.png"
+import ProjectCard from "./ProjectCard.js"
+import { Card, Grid, withStyles, Paper, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
   media: {
     width: '100%',
     paddingTop: '50.25%', // 16:9
+  },
+  cardMedia: {
+    width: '100%',
+    paddingTop: '50%', // 16:9
   },
   divider: {
     background: theme.palette.primary.main,
@@ -18,86 +25,76 @@ const useStyles = makeStyles((theme) => ({
   },
   portfolioCards: {
     margin: 16,
-    padding: theme.spacing(2),
+    textAlign: 'start',
     width: theme.spacing(46),
     height: theme.spacing(46),
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between"
   }
 }))
+
+const DarkTextTypography = withStyles({
+  root: {
+    color: "#263238"
+  }
+})(Typography);
 
 const HomeContainer = () => {
   const classes = useStyles()
 
+  let projects = [
+    {
+      projectName: "Pet Social (Orbital 2021)",
+      projectScreenshot: PetSocialLogo,
+      projectDescription: "Pet Social is a social media platform built for <u>pet owners</u> to congregate and exchange information about owning a pet. It aims to eventually centralize and digitize every needs of a pet owner for their convenience.",
+      projectStack: "React (Material-UI Library), Node.js, Express.js, MongoDB, GraphQL, Apollo Client"
+    },
+    {
+      projectName: "DSO Search Engine",
+      projectScreenshot: DSOLogo,
+      projectDescription: "Full-stack developer internship project for DSO. Worked on creating a Search Engine UI in vue.js a microservice with video and audio transcription service.",
+      projectStack: "Vue.js (Vuetify UI Library), Node.js, Express.js, Java Backend, ElasticSearch Database, Docker, Prometheus, Grafana"
+    }
+  ]
+
   return (
     <div>
       <Container maxWidth="lg">
-        <Box bgcolor="background.paper" justifyContent="center">
-          <Paper style={{backgroundColor: "#3f4443"}} flat square>
-            <Card flat square>
-              <CardMedia
-                className={classes.media}
-                image={BackgroundImage}
+        <Paper style={{backgroundColor: "#3f4443"}} flat square>
+          <Card flat square>
+            <CardMedia
+              className={classes.media}
+              image={BackgroundImage}
+            />
+          </Card>
+          <Box p={2}>
+            <Typography color="textSecondary" gutterBottom>
+              Hi there! I'm Bryan, a year 2 student from NUS. I major in Computer Engineering and I'm also part of the Engineering Scholars Programme. 
+              Welcome to my humble portfolio website! This site is still a work-in-progress, but feel free to look around.
+            </Typography>
+          </Box>
+          <Box mt={12} display="flex" justifyContent="center">
+            <Divider className={classes.divider} />
+          </Box>
+          <Box mt={12} mb={6} display="flex" justifyContent="center">
+            <Typography variant="h1">
+              Projects
+            </Typography>
+          </Box>
+          <Grid container justify="space-around">
+            {projects.map((project) => {
+              return <ProjectCard 
+                projectName={project.projectName} 
+                projectScreenshot={project.projectScreenshot} 
+                projectDescription={project.projectDescription} 
+                projectStack={project.projectStack} 
               />
-            </Card>
-            <Box p={2}>
-              <Typography color="textSecondary" gutterBottom>
-                Hi there! I'm Bryan, a year 2 student from NUS. I major in Computer Engineering and I'm also part of the Engineering Scholars Programme. 
-                Welcome to my humble portfolio website! This site is still a work-in-progress, but feel free to look around.
-              </Typography>
-            </Box>
-            <Box mt={12} display="flex" justifyContent="center">
-              <Divider className={classes.divider} />
-            </Box>
-            <Box mt={12} mb={6} display="flex" justifyContent="center">
-              <Typography variant="h1">
-                Projects
-              </Typography>
-            </Box>
-            <Grid container direction="row" justify="space-around">
-              <Grid item align="center" xs={12} md={6} lg={4}>
-                <Card className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
-                  <CardContent>
-                    <Typography color="textSecondary" gutterBottom>
-                      Card C
-                    </Typography>
-                    <Typography variant="h5" component="h2">
-                      Long content
-                    </Typography>
-                    <Typography component="p">
-                      I have quite a lot to say and as a result I am quite tall, but the
-                      other cards heights stretch with me
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">Learn More</Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-              <Grid item align="center" xs={12} md={6} lg={4}>
-                <Card className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
-                  xs=6
-                </Card>
-              </Grid>
-              <Grid item align="center" xs={12} md={6} lg={4}>
-                <Card className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
-                  xs=6
-                </Card>
-              </Grid>
-              <Grid item align="center" xs={12} md={6} lg={4}>
-                <Card className={classes.portfolioCards} style={{backgroundColor: '#00bcd4'}}>
-                  xs=6
-                </Card>
-              </Grid>
-            </Grid>
-            <Box mt={12} mb={6} display="flex" justifyContent="center">
-              <Typography variant="h1">
-                Projects
-              </Typography>
-            </Box>
-          </Paper>
-        </Box>
+            })}
+          </Grid>
+          <Box mt={12} mb={6} display="flex" justifyContent="center">
+            <Typography variant="h1">
+              Projects
+            </Typography>
+          </Box>
+        </Paper>
       </Container>
     </div>
   )
