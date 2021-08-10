@@ -21,7 +21,7 @@ const TopBar = () => {
 
   return (
     <div>
-      <AppBar position="relative">
+      <AppBar position="fixed">
           <Toolbar className={classes.root}>
             <Grid container spacing={1} alignItems="center" justify="flex-start" wrap="nowrap">
               <Button onClick={() => {history.push('/')}}>

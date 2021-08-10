@@ -1,6 +1,7 @@
 import React from 'react'
-import { Card, CardContent, Grid, withStyles, CardActionArea, Typography, makeStyles, CardMedia } from '@material-ui/core';
+import { Card, CardContent, Dialog, Grid, withStyles, CardActionArea, Typography, makeStyles, CardMedia } from '@material-ui/core';
 import ReactHtmlParser from 'react-html-parser';
+import ProjectSection from '../Projects/ProjectSection.js'
 
 const useStyles = makeStyles((theme) => ({
   media: {
@@ -9,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardMedia: {
     width: '100%',
-    paddingTop: '50%', // 16:9
+    paddingTop: '84%', // 16:9
   },
   divider: {
     background: theme.palette.primary.main,
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   portfolioCards: {
     margin: 16,
-    textAlign: 'start',
+    textAlign: 'center',
     width: theme.spacing(46),
     height: theme.spacing(46),
   }
@@ -32,29 +33,49 @@ const DarkTextTypography = withStyles({
   }
 })(Typography);
 
-const ProjectCard = ({ projectName, projectScreenshot, projectDescription, projectStack }) => {
+const ProjectCard = ({ projectName, projectLogo, projectDescription, projectStack }) => {
   const classes = useStyles()
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+  };
 
   return (
     <Grid item align="center" xs={12} md={6} lg={4}>
       <Card className={classes.portfolioCards} style={{backgroundColor: '#d9feff'}}>
-        <CardActionArea>
+        <CardActionArea onClick={handleClickOpen}>
           <CardMedia
             className={classes.cardMedia}
-            image={projectScreenshot}
+            image={projectLogo}
           />
           <CardContent>
-            <DarkTextTypography variant="h5" component="h2" gutterBottom>
+            <DarkTextTypography variant="body1" component="h2" gutterBottom>
               {ReactHtmlParser(projectName)}
             </DarkTextTypography>
-            <DarkTextTypography variant="inherit">
+            {/* <DarkTextTypography variant="inherit">
               {ReactHtmlParser(projectDescription)}
               <br></br><br></br>
               <b>Tech Stack: </b> 
               {ReactHtmlParser(projectStack)}
-            </DarkTextTypography>
+            </DarkTextTypography> */}
           </CardContent>
         </CardActionArea>
+        <Dialog fullWidth
+            PaperProps={{
+                style: {
+                backgroundColor: 'transparent',
+                boxShadow: 'none',
+                maxWidth: "75vmin"
+                },
+            }} onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+          <ProjectSection open={open} handleClose={handleClose} />
+        </Dialog>
       </Card>
     </Grid>
   )
