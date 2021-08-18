@@ -33,7 +33,7 @@ const DarkTextTypography = withStyles({
   }
 })(Typography);
 
-const ProjectCard = ({ projectName, projectLogo, projectDescription, projectStack }) => {
+const ProjectCard = ({ project }) => {
   const classes = useStyles()
 
   const [open, setOpen] = React.useState(false);
@@ -52,11 +52,11 @@ const ProjectCard = ({ projectName, projectLogo, projectDescription, projectStac
         <CardActionArea onClick={handleClickOpen}>
           <CardMedia
             className={classes.cardMedia}
-            image={projectLogo}
+            image={project.projectLogo}
           />
           <CardContent>
             <DarkTextTypography variant="body1" component="h2" gutterBottom>
-              {ReactHtmlParser(projectName)}
+              {ReactHtmlParser(project.projectName)}
             </DarkTextTypography>
             {/* <DarkTextTypography variant="inherit">
               {ReactHtmlParser(projectDescription)}
@@ -66,15 +66,9 @@ const ProjectCard = ({ projectName, projectLogo, projectDescription, projectStac
             </DarkTextTypography> */}
           </CardContent>
         </CardActionArea>
-        <Dialog fullWidth
-            PaperProps={{
-                style: {
-                backgroundColor: 'transparent',
-                boxShadow: 'none',
-                maxWidth: "75vmin"
-                },
-            }} onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-          <ProjectSection open={open} handleClose={handleClose} />
+        <Dialog fullWidth maxWidth='lg'
+ onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+          <ProjectSection project={project} handleClose={handleClose} />
         </Dialog>
       </Card>
     </Grid>

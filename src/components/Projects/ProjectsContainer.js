@@ -49,7 +49,13 @@ const ProjectsContainer = ({ data }) => {
             </Typography>
           </Box>
           {data.projects.map(project => {
-            return <ProjectSection project={project} />   
+            return <div>
+              <Box display="flex" justifyContent="center">
+                <Divider className={classes.divider} />
+              </Box>
+              <ProjectSection project={project} />
+
+            </div>
           })}       
         </Paper>
       </Box>

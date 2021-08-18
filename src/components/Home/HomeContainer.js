@@ -64,10 +64,7 @@ const HomeContainer = ({ data }) => {
           <Grid container justify="space-around">
             {data.projects.map((project) => {
               return <ProjectCard 
-                projectName={project.projectName} 
-                projectLogo={project.projectLogo} 
-                projectDescription={project.projectDescription} 
-                projectStack={project.projectStack} 
+                project={project}
               />
             })}
           </Grid>
@@ -82,10 +79,7 @@ const HomeContainer = ({ data }) => {
           <Grid container justify="space-around">
             {data.hackathons.map((project) => {
               return <ProjectCard 
-                projectName={project.projectName} 
-                projectLogo={project.projectLogo} 
-                projectDescription={project.projectDescription} 
-                projectStack={project.projectStack} 
+                project={project}
               />
             })}
           </Grid>

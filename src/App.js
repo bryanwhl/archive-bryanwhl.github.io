@@ -33,9 +33,12 @@ import DSOLogo from "./images/dso/dso-logo.png"
 
 // SBN Cookhouse Pictures Import
 import SBNCookhouseLogo from "./images/sbn-cookhouse/sbn-cookhouse-logo.jpg"
+import SBNCookhouseScreenshotTwo from "./images/sbn-cookhouse/sbn-cookhouse-ss1.png"
 
 // parkWhere Pictures Import
 import ParkWhereLogo from "./images/parkWhere/parkwhere.png"
+import ParkWhereScreenshotOne from "./images/parkWhere/parkwhere-ss1.png"
+import ParkWhereScreenshotTwo from "./images/parkWhere/parkwhere-ss2.png"
 
 // NUS Statistics Pictures Import
 import NusStatisticsLogo from "./images/nus-statistics/nus-statistics.png"
@@ -43,13 +46,17 @@ import NusStatisticsLogo from "./images/nus-statistics/nus-statistics.png"
 let customTheme = createMuiTheme({
   palette: {
     primary: {
+      // Grey
       main: '#607d8b',
     },
     secondary: {
-      main: '#00bcd4',
+      // Teal
+      main: '#75FFFF',
     },
     background: {
+      // Darker Grey
       default: '#263238',
+      // Not-as-dark Grey
       paper: '#3f4443'
     },
     type: 'dark',
@@ -98,16 +105,16 @@ function App() {
     {
       projectName: "SBN Cookhouse Bot",
       projectLogo: SBNCookhouseLogo,
-      projectDescription: "Developed a telegram bot that serves more than 500 daily users, providing functionality for checking daily food menu of SAF Cookhouses",
+      projectDescription: "Developed a telegram bot that serves more than 500 daily users, providing functionality for checking daily food menu of SAF Cookhouses.",
       projectStack: "Python, Telegram Bot API, SQLAlchemy, JavaScript",
-      projectScreenshots: []
+      projectScreenshots: [SBNCookhouseLogo, SBNCookhouseScreenshotTwo]
     }],
     hackathons: [{
       projectName: "Hack & Roll 2021 - parkWhere?",
       projectLogo: ParkWhereLogo,
       projectDescription: "Pet Social is a social media platform built for <u>pet owners</u> to congregate and exchange information about owning a pet. It aims to eventually centralize and digitize every needs of a pet owner for their convenience.",
       projectStack: "React (Material-UI Library), Node.js, Express.js, MongoDB, GraphQL, Apollo Client",
-      projectScreenshots: []
+      projectScreenshots: [ParkWhereScreenshotOne, ParkWhereScreenshotTwo]
     },
     {
       projectName: "NUS Data Science Competition 2021",
