@@ -59,7 +59,9 @@ const HomeContainer = ({ data }) => {
               <br></br>
               I am generally an ambitious person with a passion for technology and learning about the constantly-evolving tech field.
               <br></br>
-              I am also a sociable person with an interest in meeting new people. Exchanging knowledge, ideologies and life experiences with others is fascinating to me.
+              I enjoy making a positive impact in people's lives through new technology and innovation. I also find the process of creating new technology fun and fulfilling.  
+              <br></br>
+              I am a sociable person with an interest in meeting new people. Exchanging knowledge, ideologies and life experiences with others is fascinating to me.
               <br></br>
               In terms of a career goal, I strive to be at the forefront of tech innovations, driving the limits of technology at Silicon Valley by 25.
               <br></br>
