@@ -49,8 +49,33 @@ const HomeContainer = ({ data }) => {
           </Card>
           <Box p={2}>
             <Typography color="textSecondary" gutterBottom>
-              Hi there! I'm Bryan, a year 2 student from NUS. I major in Computer Engineering and I'm also part of the Engineering Scholars Programme. 
-              Welcome to my humble portfolio website! This site is still a work-in-progress, but feel free to look around.
+              Hi there! I'm Bryan, a year 2 student from NUS. I major in Computer Engineering and I'm also part of the Engineering Scholars Programme.
+              <br></br>
+              Welcome to my humble portfolio website! While the site is still a work-in-progress, feel free to look around.
+              <br></br>
+              <br></br>
+              Here's a little bit about me.
+              <br></br>
+              <br></br>
+              I am generally an ambitious person with a passion for technology and learning about the constantly-evolving tech field.
+              <br></br>
+              I am also a sociable person with an interest in meeting new people. Exchanging knowledge, ideologies and life experiences with others is fascinating to me.
+              <br></br>
+              In terms of a career goal, I strive to be at the forefront of tech innovations, driving the limits of technology at Silicon Valley by 25.
+              <br></br>
+              <br></br>
+              As of now, my interest lies in full-stack development; from frontend web development with React.js and Vue.js, to setting up backends with GraphQL/Rest APIs, to implementing Microservices with Docker and/or AWS Lambda, I am familiar with all of them.
+              <br></br>
+              <br></br>
+              I spent the first year of my undergraduate life doing various software engineering projects. In this site, I detail some of my internships, projects and hackathon experiences. 
+              <br></br>
+              <br></br>
+              This semester, I am taking Machine Learning and Computer Vision modules that will gain me knowledge and exposure to projects in these fields.
+              <br></br>
+              Learning deep tech has been a treat for me thus far; on top of my full-stack development projects, I'm hoping to gain more exposure to deep tech through upcoming projects and internships.
+              <br></br>
+              <br></br>
+              Feel free to connect with me using the buttons at the top right corner of the site!
             </Typography>
           </Box>
           <Box mt={12} display="flex" justifyContent="center">
