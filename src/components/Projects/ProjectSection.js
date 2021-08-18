@@ -38,9 +38,16 @@ const ProjectSection = ( { project } ) => {
   const classes = useStyles();
 
   return (
-    <Box pt={20} pb={10} display="flex" justifyContent="center">
+    <Box pt={10} pb={10} display="flex" justifyContent="center">
       <Paper elevation={0} className={classes.paper}>
         <Grid container direction="column" alignItems="center" justify="center">
+          <Grid item>
+            <Box pb={5}>
+              <Typography gutterBottom variant="h2" color="secondary">
+                {ReactHtmlParser(project.projectName)}
+              </Typography>
+            </Box>
+          </Grid>
           <Grid item>        
             <Carousel className={classes.carousel}>
               {
@@ -48,17 +55,14 @@ const ProjectSection = ( { project } ) => {
               }
             </Carousel> 
           </Grid>
-
-            <Paper elevation={0} className={classes.innerPaper}>
+          <Paper elevation={0} className={classes.innerPaper}>
             <Grid container direction="column" justify="start">
-              <Grid item>   
-                <Typography gutterBottom variant="h2" color="secondary">
-                  {ReactHtmlParser(project.projectName)}
-                </Typography>
-              </Grid>
               <Box pb={5}>
                 <Grid item> 
-                  <Typography variant="subtitle1" gutterBottom>
+                  <Typography variant="h5" color="secondary">
+                    Description:
+                  </Typography>
+                  <Typography variant="subtitle1">
                     {ReactHtmlParser(project.projectDescription)}
                   </Typography>
                 </Grid>
@@ -78,8 +82,8 @@ const ProjectSection = ( { project } ) => {
                   Visit Project Here!
                 </Button>
               </Grid> : null}
-              </Grid>
-            </Paper>
+            </Grid>
+          </Paper>
         </Grid>
       </Paper>
     </Box>

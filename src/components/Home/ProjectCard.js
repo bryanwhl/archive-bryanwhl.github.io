@@ -56,7 +56,7 @@ const ProjectCard = ({ project }) => {
           />
           <CardContent>
             <DarkTextTypography variant="body1" component="h2" gutterBottom>
-              {ReactHtmlParser(project.projectName)}
+              <u>{ReactHtmlParser(project.projectName)}</u>
             </DarkTextTypography>
             {/* <DarkTextTypography variant="inherit">
               {ReactHtmlParser(projectDescription)}
@@ -66,8 +66,7 @@ const ProjectCard = ({ project }) => {
             </DarkTextTypography> */}
           </CardContent>
         </CardActionArea>
-        <Dialog fullWidth maxWidth='lg'
- onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+        <Dialog fullWidth maxWidth='lg' onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
           <ProjectSection project={project} handleClose={handleClose} />
         </Dialog>
       </Card>

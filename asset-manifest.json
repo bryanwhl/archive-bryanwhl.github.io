@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/static/js/main.5b173be4.chunk.js",
-    "main.js.map": "/static/js/main.5b173be4.chunk.js.map",
+    "main.js": "/static/js/main.2206ef8c.chunk.js",
+    "main.js.map": "/static/js/main.2206ef8c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.35cbc896.js",
     "runtime-main.js.map": "/static/js/runtime-main.35cbc896.js.map",
     "static/js/2.c624bda9.chunk.js": "/static/js/2.c624bda9.chunk.js",
@@ -17,6 +17,8 @@
     "static/media/dso-ss1.d653807d.png": "/static/media/dso-ss1.d653807d.png",
     "static/media/dso-ss2.35ff1c83.png": "/static/media/dso-ss2.35ff1c83.png",
     "static/media/dso-ss3.1d163997.png": "/static/media/dso-ss3.1d163997.png",
+    "static/media/dso-ss4.ec7aa5a2.jpg": "/static/media/dso-ss4.ec7aa5a2.jpg",
+    "static/media/modman-ss2.39a8db36.png": "/static/media/modman-ss2.39a8db36.png",
     "static/media/nus-statistics-ss1.65158ac2.png": "/static/media/nus-statistics-ss1.65158ac2.png",
     "static/media/nus-statistics-ss2.42eb5300.png": "/static/media/nus-statistics-ss2.42eb5300.png",
     "static/media/nusmods-generator-ss1.d322d3ec.png": "/static/media/nusmods-generator-ss1.d322d3ec.png",
@@ -30,6 +32,13 @@
     "static/media/pet-social-ss3.4ab20a11.png": "/static/media/pet-social-ss3.4ab20a11.png",
     "static/media/pet-social-ss4.619c82f8.png": "/static/media/pet-social-ss4.619c82f8.png",
     "static/media/pet-social-ss5.17d25210.png": "/static/media/pet-social-ss5.17d25210.png",
+    "static/media/rc4foodbud-ss1.431ba3c4.jpg": "/static/media/rc4foodbud-ss1.431ba3c4.jpg",
+    "static/media/rc4foodbud-ss2.30ab7499.png": "/static/media/rc4foodbud-ss2.30ab7499.png",
+    "static/media/rc4foodbud-ss3.c195f061.png": "/static/media/rc4foodbud-ss3.c195f061.png",
+    "static/media/rc4foodbud.45ff4985.jpg": "/static/media/rc4foodbud.45ff4985.jpg",
+    "static/media/rc4welfare-ss1.3a51296a.png": "/static/media/rc4welfare-ss1.3a51296a.png",
+    "static/media/rc4welfare-ss2.fead24c8.png": "/static/media/rc4welfare-ss2.fead24c8.png",
+    "static/media/rc4welfare.8e12de69.png": "/static/media/rc4welfare.8e12de69.png",
     "static/media/sbn-cookhouse-logo.3aa71bfb.jpg": "/static/media/sbn-cookhouse-logo.3aa71bfb.jpg",
     "static/media/sbn-cookhouse-ss1.13e7088f.png": "/static/media/sbn-cookhouse-ss1.13e7088f.png"
   },
@@ -37,6 +46,6 @@
     "static/js/runtime-main.35cbc896.js",
     "static/js/2.c624bda9.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.5b173be4.chunk.js"
+    "static/js/main.2206ef8c.chunk.js"
   ]
 }

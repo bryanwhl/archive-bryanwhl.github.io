@@ -32,6 +32,7 @@ import NUSModsScreenshotOne from "./images/nusmods-generator/nusmods-generator-s
 import DSOScreenshotOne from "./images/dso/dso-ss1.png"
 import DSOScreenshotTwo from "./images/dso/dso-ss2.png"
 import DSOScreenshotThree from "./images/dso/dso-ss3.png"
+import DSOScreenshotFour from "./images/dso/dso-ss4.jpg"
 import DSOLogo from "./images/dso/dso-logo.png"
 
 // SBN Cookhouse Pictures Import
@@ -47,6 +48,22 @@ import ParkWhereScreenshotTwo from "./images/parkWhere/parkwhere-ss2.png"
 import NusStatisticsLogo from "./images/nus-statistics/nus-statistics.png"
 import NusStatisticsScreenshotOne from "./images/nus-statistics/nus-statistics-ss1.png"
 import NusStatisticsScreenshotTwo from "./images/nus-statistics/nus-statistics-ss2.png"
+
+// RC4FoodBud Pictures Import
+import RC4FoodBudLogo from "./images/RC4FoodBud/rc4foodbud.jpg"
+import RC4FoodBudScreenshotOne from "./images/RC4FoodBud/rc4foodbud-ss1.jpg"
+import RC4FoodBudScreenshotTwo from "./images/RC4FoodBud/rc4foodbud-ss2.png"
+import RC4FoodBudScreenshotThree from "./images/RC4FoodBud/rc4foodbud-ss3.png"
+
+// ModMan Pictures Import
+import ModManLogo from "./images/modman/modman.png"
+import ModManScreenshotOne from "./images/modman/modman-ss1.png"
+import ModManScreenshotTwo from "./images/modman/modman-ss2.png"
+
+// RC4 Welfare Pictures Import
+import RC4WelfareLogo from "./images/rc4welfare/rc4welfare.png"
+import RC4WelfareScreenshotOne from "./images/rc4welfare/rc4welfare-ss1.png"
+import RC4WelfareScreenshotTwo from "./images/rc4welfare/rc4welfare-ss2.png"
 
 let customTheme = createMuiTheme({
   palette: {
@@ -104,10 +121,10 @@ function App() {
     {
       projectName: "DSO Search Engine",
       projectLogo: DSOLogo,
-      projectDescription: "Full-stack developer internship project for DSO. Worked on creating a Search Engine UI in vue.js, and a microservice for video and audio transcription.",
+      projectDescription: "Full-stack internship project for DSO. Worked on creating a Search Engine UI in Vue.js using Vuetify UI library, and a dockerized microservice for video and audio transcription. In addition, we built a metric dashboard to chart the health of the microservice using Grafana and Prometheus.",
       projectStack: "Vue.js (Vuetify UI Library), Node.js, Express.js, Java Backend, ElasticSearch Database, Docker, Prometheus, Grafana",
       projectLink: "",
-      projectScreenshots: [DSOScreenshotOne, DSOScreenshotTwo, DSOScreenshotThree]
+      projectScreenshots: [DSOScreenshotOne, DSOScreenshotTwo, DSOScreenshotThree, DSOScreenshotFour]
     },
     {
       projectName: "SBN Cookhouse Bot",
@@ -116,6 +133,30 @@ function App() {
       projectStack: "Python, Telegram Bot API, SQLAlchemy, JavaScript",
       projectLink: "https://t.me/SBN_cookhouse_bot",
       projectScreenshots: [SBNCookhouseLogo, SBNCookhouseScreenshotTwo]
+    },
+    {
+      projectName: "RC4FoodBud",
+      projectLogo: RC4FoodBudLogo,
+      projectDescription: "RC4FoodBud was a winter break project. Together with friends in RC4 OrcaTech, the four of us build a telegram bot-and-channel system that connects RC4 residences through meals. We hoped to cultivate an open culture within the college where residences can meet new people easily through the bot.",
+      projectStack: "Python, Telegram Bot API",
+      projectLink: "https://github.com/bryanwhl/RC4_FoodBuddy",
+      projectScreenshots: [RC4FoodBudScreenshotOne, RC4FoodBudScreenshotTwo, RC4FoodBudScreenshotThree]
+    },
+    {
+      projectName: "ModMan",
+      projectLogo: ModManLogo,
+      projectDescription: "Short for Module Manager, ModMan is a desktop app designed to help teaching assistants (TAs) manage their module(s). It is optimized for use via a Command Line Interface (CLI). ModMan helps to track module details as well as students’ progress and data, all in one platform. It can also perform autograding for MCQ assignments.",
+      projectStack: "Java",
+      projectLink: "https://github.com/bryanwhl/ModMan",
+      projectScreenshots: [ModManScreenshotOne, ModManScreenshotTwo]
+    },
+    {
+      projectName: "RC4 Welfare System",
+      projectLogo: RC4WelfareLogo,
+      projectDescription: "A web application + telegram bot that automates the welfare distribution system within RC4. The web application serves as a dashboard for the administrator (Director of Welfare) to manage welfare events and to do any administrative tasks required for an event. The telegram bot is meant for RC4 residences to sign up for welfare and to automate any administrative tasks required from the residences.",
+      projectStack: "React (React-Boostrap UI), Node.js, Python, Flask, SQLite Database, REST API",
+      projectLink: "https://github.com/bryanleongys/rc4welfarebot",
+      projectScreenshots: [RC4WelfareScreenshotOne, RC4WelfareScreenshotTwo]
     }],
     hackathons: [{
       projectName: "Hack & Roll 2021 - parkWhere?",
