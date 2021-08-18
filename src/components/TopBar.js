@@ -27,11 +27,14 @@ const TopBar = () => {
               <Button onClick={() => {history.push('/')}}>
                 Home
               </Button>
-              <Button onClick={() => {history.push('/about')}}>
+              {/* <Button onClick={() => {history.push('/about')}}>
                 About
-              </Button>
+              </Button> */}
               <Button onClick={() => {history.push('/projects')}}>
                 Projects
+              </Button>
+              <Button onClick={() => {history.push('/hackathons')}}>
+                Hackathons
               </Button>
               <Button onClick={() => {history.push('/work')}}>
                 Work

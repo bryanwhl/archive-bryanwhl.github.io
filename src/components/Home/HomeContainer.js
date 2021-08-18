@@ -83,6 +83,9 @@ const HomeContainer = ({ data }) => {
               />
             })}
           </Grid>
+          <Box mt={12} pb={12} display="flex" justifyContent="center">
+            <Divider className={classes.divider} />
+          </Box>
         </Paper>
       </Container>
     </div>

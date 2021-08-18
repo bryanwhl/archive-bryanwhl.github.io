@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Dialog, Box, Paper, Divider, Button, CardContent, ButtonBase, Grid, withStyles, CardActionArea, Typography, makeStyles, CardMedia } from '@material-ui/core';
+import { Card, Dialog, Box, Paper, Link, Divider, Button, CardContent, ButtonBase, Grid, withStyles, CardActionArea, Typography, makeStyles, CardMedia } from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel'
 import CarouselCard from "./CarouselCard.js"
 import ReactHtmlParser from 'react-html-parser';
@@ -71,6 +71,13 @@ const ProjectSection = ( { project } ) => {
                   {ReactHtmlParser(project.projectStack)}
                 </Typography>
               </Grid>
+              <br></br>
+              <br></br>
+              {project.projectLink !== '' ? <Grid item>
+                <Button variant="contained" color="secondary" href={project.projectLink}>
+                  Visit Project Here!
+                </Button>
+              </Grid> : null}
               </Grid>
             </Paper>
         </Grid>
