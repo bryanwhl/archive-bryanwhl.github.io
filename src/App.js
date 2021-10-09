@@ -4,13 +4,14 @@ import { ThemeProvider, createMuiTheme, responsiveFontSizes, makeStyles } from '
 import { blue, purple } from '@material-ui/core/colors'
 import { Paper } from '@material-ui/core'
 import CssBaseline from "@material-ui/core/CssBaseline";
+import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import BackgroundImage from "./images/background2.jpg"
+import BackgroundImage from "./images/background.jpg"
 import HomeContainer from "./components/Home/HomeContainer.js"
 import ProjectsContainer from "./components/Projects/ProjectsContainer.js"
 import HackathonsContainer from "./components/Projects/HackathonsContainer.js"
@@ -73,7 +74,7 @@ let customTheme = createMuiTheme({
     },
     secondary: {
       // Teal
-      main: '#75FFFF',
+      main: '#e1edeb',
     },
     background: {
       // Darker Grey
@@ -186,7 +187,7 @@ function App() {
 
   return (
     <Router>
-      <div width="fluid">
+      <div width="fluid" className="App-background">
         <ThemeProvider theme = {customTheme}>
           <CssBaseline />
           <TopBar />
