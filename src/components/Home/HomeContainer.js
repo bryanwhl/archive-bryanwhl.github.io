@@ -2,8 +2,9 @@ import React from 'react'
 import BackgroundImage from "../../images/background.jpg"
 import AvatarImage from "../../images/avatar.jpg"
 import ProjectCard from "./ProjectCard.js"
-import { Card, Grid, withStyles, Paper, Typography, Box, Container, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
-
+import { Card, Grid, withStyles, Paper, Typography, Box, Button, Container, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import resumeLink from "../../images/BryanWong_CV.pdf"
+import PersonalPicture from "../../images/background2.jpg"
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -17,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   media: {
-    width: '100%',
-    paddingTop: '50.25%', // 16:9
+    height: 0,
+    paddingTop: '40.25%', // 16:9,
   },
   cardMedia: {
     width: '100%',
@@ -50,68 +51,68 @@ const HomeContainer = ({ data }) => {
 
   return (
     <div>
-      <Container maxWidth="lg">
-      <Paper className={classes.paper}>
-        <Box display="flex" justifyContent="center" paddingTop="20px">
-          <Card className={classes.paper}>
-            <Avatar src={AvatarImage} style={{ height: '200px', width: '200px' }} />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over 6,000
-                <br></br>
-                species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </Card>
-        </Box>
-      </Paper>
-      </Container>
-      <div style={{paddingTop: "1000px"}}>
-        <Container maxWidth="lg">
-          <Paper style={{backgroundColor: "#3f4443"}} flat square>
-            <Card flat square>
-              <CardMedia
-                className={classes.media}
-                image={BackgroundImage}
-              />
-            </Card>
-            <Box p={2}>
-              <Typography color="textSecondary" gutterBottom>
-                Hi there! I'm Bryan, a year 2 student from NUS. I major in Computer Engineering and I'm also part of the Engineering Scholars Programme.
-                <br></br>
-                Welcome to my humble portfolio website! While the site is still a work-in-progress, feel free to look around.
-                <br></br>
-                <br></br>
-                Here's a little bit about me.
-                <br></br>
-                <br></br>
-                I am generally an ambitious person with a passion for technology and learning about the constantly-evolving tech field.
-                <br></br>
-                I enjoy making a positive impact in people's lives through new technology and innovation. I also find the process of creating new technology fun and fulfilling.  
-                <br></br>
-                I am a sociable person with an interest in meeting new people. Exchanging knowledge, ideologies and life experiences with others is fascinating to me.
-                <br></br>
-                In terms of a career goal, I strive to be at the forefront of tech innovations, driving the limits of technology at Silicon Valley by 25.
-                <br></br>
-                <br></br>
-                As of now, my interest lies in full-stack development; from frontend web development with React.js and Vue.js, to setting up backends with GraphQL/Rest APIs, to implementing Microservices with Docker and/or AWS Lambda, I am familiar with all of them.
-                <br></br>
-                <br></br>
-                I spent the first year of my undergraduate life doing various software engineering projects. In this site, I detail some of my internships, projects and hackathon experiences. 
-                <br></br>
-                <br></br>
-                This semester, I am taking Machine Learning and Computer Vision modules that will gain me knowledge and exposure to projects in these fields.
-                <br></br>
-                Learning deep tech has been a treat for me thus far; on top of my full-stack development projects, I'm hoping to gain more exposure to deep tech through upcoming projects and internships.
-                <br></br>
-                <br></br>
-                Feel free to connect with me using the buttons at the top right corner of the site!
-              </Typography>
-            </Box>
-          </Paper>
+      <Box display="flex" justifyContent="center" paddingTop="60px" width="100%">
+        <Card sx={{ display: 'flex' }} className={classes.paper}>
+          <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+          <Avatar src={AvatarImage} style={{ height: '200px', width: '200px' }} />
+          <Box paddingLeft={3} />
+          <CardContent>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Typography style={{color:"#00adb5"}} gutterBottom variant="h5" component="div">
+              Hi, I'm Bryan, 
+              <br></br>
+              a Full Stack Developer.
+            </Typography>
+            <Box paddingTop={3} />
+            <a href={resumeLink} style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" download>
+              <Button variant="contained">
+                  Download Resume
+              </Button>
+            </a>
+          </Box>
+          </CardContent>
+          </Box>
+        </Card>
+      </Box>
+      <div style={{paddingTop: "300px"}}>
+        <Grid
+          container
+          direction="column"
+          alignItems="center"
+          justify="center"
+          style={{ minHeight: '100vh' }}
+        >
+          <Box width="80%">
+            <Grid item>
+              <Paper style={{backgroundColor: "#f7fffe"}} flat square>
+                <Box pt={10} mb={6} display="flex" justifyContent="center" id="projects">
+                  <Typography variant="h4" style={{ textDecoration: 'underline' }}>
+                    Introduction
+                  </Typography>
+                </Box>
+                  <Box width="80%">
+                    <Card sx={{ display: 'flex' }}>
+                      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                        <CardContent sx={{ flex: '1 0 auto' }}>
+                          <Typography component="div" variant="h5">
+                            Live From Space
+                          </Typography>
+                          <Typography variant="subtitle1" color="text.secondary" component="div">
+                            Mac Miller
+                          </Typography>
+                        </CardContent>
+                      </Box>
+                      <CardMedia
+                        component="img"
+                        sx={{ width: 151 }}
+                        image={PersonalPicture}
+                        alt="Live from space album cover"
+                      />
+                    </Card>
+                  </Box>
+              </Paper>
+            </Grid>
+          <Grid>
           <Paper>
             <Box mt={12} display="flex" justifyContent="center">
               <Divider className={classes.divider} />
@@ -147,7 +148,9 @@ const HomeContainer = ({ data }) => {
               <Divider className={classes.divider} />
             </Box>
           </Paper>
-        </Container>
+          </Grid>
+          </Box>
+        </Grid>
       </div>
     </div>
   )

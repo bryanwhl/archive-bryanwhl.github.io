@@ -34,7 +34,7 @@ const HackathonsContainer = ({ data }) => {
   const classes = useStyles()
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="md">
       <Box mt={7}>
         <Paper style={{backgroundColor: "#3f4443"}} flat square>
           <Box mt={5} pt={10} mb={6} display="flex" justifyContent="center">

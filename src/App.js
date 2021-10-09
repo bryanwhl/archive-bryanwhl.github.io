@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import TopBar from './components/TopBar'
-import { ThemeProvider, createMuiTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles'
+import { ThemeProvider, createTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles'
 import { blue, purple } from '@material-ui/core/colors'
 import { Paper } from '@material-ui/core'
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -66,11 +66,11 @@ import RC4WelfareLogo from "./images/rc4welfare/rc4welfare.png"
 import RC4WelfareScreenshotOne from "./images/rc4welfare/rc4welfare-ss1.png"
 import RC4WelfareScreenshotTwo from "./images/rc4welfare/rc4welfare-ss2.png"
 
-let customTheme = createMuiTheme({
+let customTheme = createTheme({
   palette: {
     primary: {
       // Grey
-      main: '#607d8b',
+      main: '#00adb5',
     },
     secondary: {
       // Teal
@@ -82,11 +82,16 @@ let customTheme = createMuiTheme({
       // Not-as-dark Grey
       paper: '#3f4443'
     },
-    type: 'dark',
   },
   typography: {
     fontSize: 16,
-    fontFamily: '"Open Sans"'
+    fontFamily: [
+      'Nunito',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif'
+    ].join(','),
   }
 })
 
