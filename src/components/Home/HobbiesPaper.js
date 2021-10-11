@@ -65,14 +65,14 @@ const HobbiesPaper = () => {
     "Swim a lot",
     "Have a gym routine",
     "Blog about food on <a href='https://instagram.com/bryanwhl_food'>instagram</a>",
-    "Solve leetcode and programming challenges online… for fun",
+    "Solve leetcode and programming challenges online",
     "Play the double bass and bass guitar",
     "Volunteer at charity and community events"
   ];
 
   return (
     <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-      <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
+      <Box display="flex" justifyContent="center" id="projects">
         <Typography variant="h4" style={{ textDecoration: 'underline' }}>
           Interesting things about me...
         </Typography>
@@ -100,6 +100,7 @@ const HobbiesPaper = () => {
                   <CardMedia className={classes.cardMedia} image={KattisImage} />
                 </Card>
               </Carousel>
+              <Box mb={5} />
             </Grid>
             <Grid item>
               <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>

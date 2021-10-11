@@ -14,7 +14,7 @@ import {
 import BackgroundImage from "./images/background.jpg"
 import HomeContainer from "./components/Home/HomeContainer.js"
 import ProjectsContainer from "./components/Projects/ProjectsContainer.js"
-import HackathonsContainer from "./components/Projects/HackathonsContainer.js"
+import Work from "./components/Work/Work.js"
 import ComingSoon from "./components/ComingSoon.js"
 
 // Pet Social Pictures Import
@@ -197,20 +197,11 @@ function App() {
           <CssBaseline />
           <TopBar />
           <Switch>
-            <Route path="/about">
-              {/* <Header /> */}
-            </Route>
-            <Route path="/work">
-              <ComingSoon />
-            </Route>
-            <Route path="/contact">
-              <ComingSoon />
-            </Route>
-            <Route path="/hackathons">
-              <HackathonsContainer data={data}/>
-            </Route>
             <Route path="/projects">
               <ProjectsContainer data={data}/>
+            </Route>
+            <Route path="/work">
+              <Work />
             </Route>
             <Route path="/">
               <HomeContainer data={data}/>
