@@ -84,7 +84,7 @@ const SkillsPaper = () => {
       <Box display="flex" justifyContent="center">
         <Box width="80%">
           <Grid container className={classes.root}>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
+            <Grid container item xs={12} sm={12} md={12} lg={4} xl={4} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
@@ -108,7 +108,7 @@ const SkillsPaper = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
+            <Grid container item xs={12} sm={12} md={12} lg={4} xl={4} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
@@ -132,7 +132,7 @@ const SkillsPaper = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
+            <Grid container item xs={12} sm={12} md={12} lg={4} xl={4} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
@@ -156,13 +156,13 @@ const SkillsPaper = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
+            <Grid container item xs={12} sm={12} md={12} lg={4} xl={4} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
                     <Typography variant="h6" style={{fontWeight: 600}}>
                       <StorageIcon style={{ fontSize: 18 }} />
-                      &nbsp;Database &amp; API
+                      &nbsp;API &amp; Database
                     </Typography>
                   </Box>
                   <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>
@@ -180,7 +180,7 @@ const SkillsPaper = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
+            <Grid container item xs={12} sm={12} md={12} lg={4} xl={4} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">

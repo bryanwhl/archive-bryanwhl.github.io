@@ -7,6 +7,7 @@ import resumeLink from "../../images/BryanWong_CV.pdf"
 import PersonalPicture from "../../images/background3.jpg"
 import SkillsPaper from "./SkillsPaper.js"
 import FindOutMore from "./FindOutMore.js"
+import HobbiesPaper from "./HobbiesPaper.js"
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -122,8 +123,8 @@ const HomeContainer = ({ data }) => {
                     Introduction
                   </Typography>
                 </Box>
-                  <Card className={classes.paper} display="flex" elevation={0} width="80%">
-                    <Box display="flex" flexDirection="row">
+                  <Card className={classes.paper} elevation={0} width="80%">
+                    <Box display="flex" flexDirection="row" flexShrink={0} flexBasis={0} flexGrow={0}>
                       <Box ml={5} />
                       <CardMedia
                         className={classes.media}
@@ -131,7 +132,7 @@ const HomeContainer = ({ data }) => {
                       />
                       <Box ml={5} />
                       <CardContent>
-                        <Typography variant="subtitle1" color="text.secondary" component="div">
+                        <Typography variant="body2" color="text.secondary" component="div">
                           Welcome to my site! I’m Bryan Wong, a penultimate year Computer Engineering student from National University of Singapore (NUS). I currently hold a GPA of 4.67/5.0 and I’m on track to graduate with a First Class Honours degree. I’m also part of the Engineering Scholars Programme, a bond-free scholarship programme in NUS given to the top engineering students of each cohort.
                           <br></br>
                           <br></br>
@@ -150,6 +151,10 @@ const HomeContainer = ({ data }) => {
               <Box mt={15} />
 
               <FindOutMore />
+
+              <Box mt={15} />
+
+              <HobbiesPaper />
         
             </Grid>
           <Grid>

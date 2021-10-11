@@ -1,8 +1,9 @@
 import React from 'react'
-import BackgroundImage from "../../images/background.jpg"
+import ProjectImage from "../../images/project.jpg"
+import WorkImage from "../../images/work.jpg"
 import AvatarImage from "../../images/avatar.jpg"
 import ProjectCard from "./ProjectCard.js"
-import { Card, Grid, withStyles, Paper, Typography, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, Grid, withStyles, Paper, Typography, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, CardContent, Avatar, makeStyles, Divider, CardMedia, CardActionArea } from '@material-ui/core';
 import resumeLink from "../../images/BryanWong_CV.pdf"
 import PersonalPicture from "../../images/background3.jpg"
 import StorageIcon from '@material-ui/icons/Storage';
@@ -13,10 +14,24 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    minWidth: "35vmin",
-    maxWidth: "35vmin",
+    minWidth: "50vmin",
+    maxWidth: "50vmin",
+    position: "relative",
     margin: 20,
   },
+  cardMedia: {
+    width: '100%',
+    paddingTop: '84%', // 16:9
+    filter: "brightness(50%)",
+  },
+  font: {
+    position: "absolute",
+    top: "35%",
+    width: "100%",
+    textAlign: "center",
+    color: "white",
+    textDecoration: 'underline',
+  }
 }))
 
 
@@ -84,124 +99,40 @@ const FindOutMore = () => {
       <Box display="flex" justifyContent="center">
         <Box width="80%">
           <Grid container className={classes.root}>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
+            <Grid container item xs={12} sm={12} md={12} lg={6} xl={6} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardContent>
-                  <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
-                      <LanguageIcon style={{ fontSize: 18 }} />
-                      &nbsp;Language
-                    </Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>
-                    <ul>
-                      {languages.map(language => {
-                        return <li>
-                          <Typography variant="subtitle2">
-                            {language}
-                            <br></br>
-                          </Typography>
-                        </li>
-                      })}
-                    </ul>
-                  </Box>
-                </CardContent>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image={ProjectImage}
+                  />
+                  <Typography
+                    gutterBottom
+                    variant="h4"
+                    component="h4"
+                    className={classes.font}
+                  >
+                    Projects
+                  </Typography>
+                </CardActionArea>
               </Card>
             </Grid>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
+            <Grid container item xs={12} sm={12} md={12} lg={6} xl={6} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardContent>
-                  <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
-                      <AndroidIcon style={{ fontSize: 18 }} />
-                      &nbsp;Frameworks
-                    </Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>
-                    <ul>
-                      {frameworks.map(framework => {
-                        return <li>
-                          <Typography variant="subtitle2">
-                            {framework}
-                            <br></br>
-                          </Typography>
-                        </li>
-                      })}
-                    </ul>
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardContent>
-                  <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
-                      <TrendingUpIcon style={{ fontSize: 18 }} />
-                      &nbsp;Data Science
-                    </Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>
-                    <ul>
-                      {dataScience.map(skill => {
-                        return <li>
-                          <Typography variant="subtitle2">
-                            {skill}
-                            <br></br>
-                          </Typography>
-                        </li>
-                      })}
-                    </ul>
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardContent>
-                  <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
-                      <StorageIcon style={{ fontSize: 18 }} />
-                      &nbsp;Database &amp; API
-                    </Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>
-                    <ul>
-                      {dataBase.map(skill => {
-                        return <li>
-                          <Typography variant="subtitle2">
-                            {skill}
-                            <br></br>
-                          </Typography>
-                        </li>
-                      })}
-                    </ul>
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardContent>
-                  <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
-                      <AssignmentIcon style={{ fontSize: 18 }} />
-                      &nbsp;DevOps / Management
-                    </Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>
-                    <ul>
-                      {devOps.map(skill => {
-                        return <li>
-                          <Typography variant="subtitle2">
-                            {skill}
-                            <br></br>
-                          </Typography>
-                        </li>
-                      })}
-                    </ul>
-                  </Box>
-                </CardContent>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image={WorkImage}
+                  />
+                  <Typography
+                    gutterBottom
+                    variant="h4"
+                    component="h4"
+                    className={classes.font}
+                  >
+                    Experience
+                  </Typography>
+                </CardActionArea>
               </Card>
             </Grid>
           </Grid>
