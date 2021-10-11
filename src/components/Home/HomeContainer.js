@@ -2,9 +2,38 @@ import React from 'react'
 import BackgroundImage from "../../images/background.jpg"
 import AvatarImage from "../../images/avatar.jpg"
 import ProjectCard from "./ProjectCard.js"
-import { Card, Grid, withStyles, Paper, Typography, Box, Button, Container, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, Grid, withStyles, Paper, Typography, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
 import resumeLink from "../../images/BryanWong_CV.pdf"
-import PersonalPicture from "../../images/background2.jpg"
+import PersonalPicture from "../../images/background3.jpg"
+import SkillsPaper from "./SkillsPaper.js"
+import FindOutMore from "./FindOutMore.js"
+
+const StyledTableCell = withStyles((theme) => ({
+  head: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  body: {
+    fontSize: 14,
+  },
+}))(TableCell);
+
+const StyledTableRow = withStyles((theme) => ({
+  root: {
+    '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+  },
+}))(TableRow);
+
+function createData(languages, frameworks, dataScience, database, devOps) {
+  return { languages, frameworks, dataScience, database, devOps };
+}
+
+const rows = [
+  createData('JavaScript', 'React (+Redux, Material-UI)', 'Pandas', 'MongoDB', 'Docker'),
+  createData('Python', 'Vue.js (+ Vuex, Vuetify)', 'OpenCV', 'SQL (SQLite, PostGreSQL, SQLAlchemy)', 'AWS Amplify'),
+];
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -18,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   media: {
-    height: 0,
-    paddingTop: '40.25%', // 16:9,
+    width: '200%',
+    paddingTop: '50%', // 16:9
   },
   cardMedia: {
     width: '100%',
@@ -37,7 +66,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'start',
     width: theme.spacing(46),
     height: theme.spacing(46),
-  }
+  },
+  table: {
+    minWidth: 700,
+  },
 }))
 
 const DarkTextTypography = withStyles({
@@ -65,8 +97,8 @@ const HomeContainer = ({ data }) => {
             </Typography>
             <Box paddingTop={3} />
             <a href={resumeLink} style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" download>
-              <Button variant="contained">
-                  Download Resume
+              <Button variant="contained" style={{width: "30vmin"}}>
+                Download Resume
               </Button>
             </a>
           </Box>
@@ -82,55 +114,53 @@ const HomeContainer = ({ data }) => {
           justify="center"
           style={{ minHeight: '100vh' }}
         >
-          <Box width="80%">
+          <Box width="70%">
             <Grid item>
-              <Paper style={{backgroundColor: "#f7fffe"}} flat square>
-                <Box pt={10} mb={6} display="flex" justifyContent="center" id="projects">
+              <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
+                <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
                   <Typography variant="h4" style={{ textDecoration: 'underline' }}>
                     Introduction
                   </Typography>
                 </Box>
-                  <Box width="80%">
-                    <Card sx={{ display: 'flex' }}>
-                      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                        <CardContent sx={{ flex: '1 0 auto' }}>
-                          <Typography component="div" variant="h5">
-                            Live From Space
-                          </Typography>
-                          <Typography variant="subtitle1" color="text.secondary" component="div">
-                            Mac Miller
-                          </Typography>
-                        </CardContent>
-                      </Box>
+                  <Card className={classes.paper} display="flex" elevation={0} width="80%">
+                    <Box display="flex" flexDirection="row">
+                      <Box ml={5} />
                       <CardMedia
-                        component="img"
-                        sx={{ width: 151 }}
+                        className={classes.media}
                         image={PersonalPicture}
-                        alt="Live from space album cover"
                       />
-                    </Card>
-                  </Box>
+                      <Box ml={5} />
+                      <CardContent>
+                        <Typography variant="subtitle1" color="text.secondary" component="div">
+                          Welcome to my site! I’m Bryan Wong, a penultimate year Computer Engineering student from National University of Singapore (NUS). I currently hold a GPA of 4.67/5.0 and I’m on track to graduate with a First Class Honours degree. I’m also part of the Engineering Scholars Programme, a bond-free scholarship programme in NUS given to the top engineering students of each cohort.
+                          <br></br>
+                          <br></br>
+                          More importantly, I’m a full stack developer and a technology enthusiast. I aim to make a difference in people’s lives through creating new technology that will benefit the world. I strive for a career in Silicon Valley with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
+                        </Typography>
+                      </CardContent>
+                    </Box>
+                  </Card>
+                <Box pb={5} />
               </Paper>
+
+              <Box mt={15} />
+
+              <SkillsPaper />
+
+              <Box mt={15} />
+
+              <FindOutMore />
+        
             </Grid>
           <Grid>
           <Paper>
-            <Box mt={12} display="flex" justifyContent="center">
-              <Divider className={classes.divider} />
+            <Box mt={15} display="flex" justifyContent="center">
+              {/* <Divider className={classes.divider} /> */}
             </Box>
             <Box mt={12} mb={6} display="flex" justifyContent="center" id="projects">
               <Typography variant="h1">
-                Projects
+                Skills
               </Typography>
-            </Box>
-            <Grid container justify="space-around">
-              {data.projects.map((project) => {
-                return <ProjectCard 
-                  project={project}
-                />
-              })}
-            </Grid>
-            <Box mt={12} display="flex" justifyContent="center">
-              <Divider className={classes.divider} />
             </Box>
             <Box mt={12} mb={6} display="flex" justifyContent="center">
               <Typography variant="h1" id="hackathons">
