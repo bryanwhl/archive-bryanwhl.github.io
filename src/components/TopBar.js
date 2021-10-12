@@ -1,4 +1,4 @@
-import {Typography, IconButton, AppBar, Box, Card, Link, CardActions, Button, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container} from '@material-ui/core';
+import {Typography, IconButton, Divider, AppBar, Box, Card, Link, CardActions, Button, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container} from '@material-ui/core';
 import CodeIcon from '@material-ui/icons/Code';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -7,6 +7,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import EmailIcon from '@material-ui/icons/Email';
 import { useHistory } from "react-router-dom";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import HomeIcon from '@material-ui/icons/Home';
+import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
+import AppsIcon from '@material-ui/icons/Apps';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,22 +28,24 @@ const TopBar = () => {
           <Toolbar className={classes.root}>
             <Grid container spacing={1} alignItems="center" justify="flex-start" wrap="nowrap">
               <Button onClick={() => {history.push('/')}}>
-                Home
+                <HomeIcon style={{ fontSize: 17 }} />
+                <Typography variant="subtitle2">
+                  &nbsp;Home
+                </Typography>
               </Button>
-              {/* <Button onClick={() => {history.push('/about')}}>
-                About
-              </Button> */}
+              <Divider orientation="vertical" flexItem />
               <Button onClick={() => {history.push('/projects')}}>
-                Projects
+                <AppsIcon style={{ fontSize: 17 }} />
+                <Typography variant="subtitle2">
+                  &nbsp;Projects
+                </Typography>
               </Button>
-              <Button onClick={() => {history.push('/hackathons')}}>
-                Hackathons
-              </Button>
+              <Divider orientation="vertical" flexItem />
               <Button onClick={() => {history.push('/work')}}>
-                Work
-              </Button>
-              <Button onClick={() => {history.push('/contact')}}>
-                Contact
+                <WorkOutlineIcon style={{ fontSize: 17 }} />
+                <Typography variant="subtitle2">
+                  &nbsp;Work  
+                </Typography>
               </Button>
             </Grid>
             <Grid container spacing={1} alignItems="center" justify="flex-end" wrap="nowrap">

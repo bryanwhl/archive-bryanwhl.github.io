@@ -37,6 +37,8 @@ const useStyles = makeStyles((theme) => ({
 const ProjectSection = ( { project } ) => {
   const classes = useStyles();
 
+  console.log(project);
+
   return (
     <Box pt={10} pb={10} display="flex" justifyContent="center">
       <Paper elevation={0} className={classes.paper}>

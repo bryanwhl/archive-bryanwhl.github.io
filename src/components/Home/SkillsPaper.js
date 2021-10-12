@@ -13,8 +13,8 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    minWidth: "35vmin",
-    maxWidth: "35vmin",
+    minWidth: "92%",
+    maxWidth: "92%",
     margin: 20,
   },
 }))
@@ -162,7 +162,7 @@ const SkillsPaper = () => {
                   <Box display="flex" justifyContent="center">
                     <Typography variant="h6" style={{fontWeight: 600}}>
                       <StorageIcon style={{ fontSize: 18 }} />
-                      &nbsp;API &amp; Database
+                      &nbsp;&nbsp;API &amp; Database
                     </Typography>
                   </Box>
                   <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>

@@ -2,7 +2,7 @@ import React from 'react'
 import BackgroundImage from "../../images/background.jpg"
 import AvatarImage from "../../images/avatar.jpg"
 import ProjectCard from "./ProjectCard.js"
-import { Card, Grid, withStyles, Paper, Typography, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, Grid, Fade, Zoom, withStyles, Paper, Typography, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
 import resumeLink from "../../images/BryanWong_CV.pdf"
 import PersonalPicture from "../../images/background3.jpg"
 import SkillsPaper from "./SkillsPaper.js"
@@ -22,8 +22,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   media: {
-    width: '750px',
-    minHeight: '550px',
+    paddingTop: '100%',
+    minWidth: '100%',
+    maxWidth: '100%',
   },
   cardMedia: {
     width: '100%',
@@ -53,12 +54,14 @@ const DarkTextTypography = withStyles({
   }
 })(Typography);
 
-const HomeContainer = ({ data }) => {
+const HomeContainer = ({ loading }) => {
   const classes = useStyles()
 
   return (
     <div>
-      <Header />
+      <Zoom in={loading === true} timeout={4000}>
+        <Header />
+      </Zoom>
       <Grid
         container
         direction="column"
@@ -74,18 +77,18 @@ const HomeContainer = ({ data }) => {
                     Introduction
                   </Typography>
                 </Box>
-
+                
                   <Card className={classes.paper} elevation={0}>
-                    <Grid container>
-                      <Grid container item xs={12} sm={12} md={12} lg={5} xl={5}>
+                    <Grid container>  
+                      <Grid container item xs={12} sm={12} md={6} lg={6} xl={6} justifyContent="center" alignItems="center">
                         <CardMedia
                           className={classes.media}
                           image={PersonalPicture}
-                        />
+                        />  
                       </Grid>
-                      <Grid container item xs={12} sm={12} md={12} lg={7} xl={7}>
+                      <Grid container item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <CardContent>
-                          <Typography variant="subtitle1" color="text.secondary" component="div">
+                          <Typography variant="body2" color="text.secondary" component="div">
                             Welcome to my site! I’m Bryan Wong, a penultimate year Computer Engineering student from National University of Singapore (NUS). I currently hold a GPA of 4.67/5.0 and I’m on track to graduate with a First Class Honours degree. I’m also part of the Engineering Scholars Programme, a bond-free scholarship programme in NUS given to the top engineering students of each cohort.
                             <br></br>
                             <br></br>
@@ -95,6 +98,7 @@ const HomeContainer = ({ data }) => {
                       </Grid>
                     </Grid>
                   </Card>
+                
         
                 <Box pb={5} />
               </Paper>

@@ -13,11 +13,21 @@
   }
 }
 
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  100% {
+      background-position: 100% 0%;
+  }
+}
+
 .App-background {
-  background: url('./images/background.jpg');
+  background: url('./images/background4.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  animation: gradient 2s ease;
 }
 
 .App-header {

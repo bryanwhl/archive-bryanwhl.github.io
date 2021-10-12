@@ -2,7 +2,8 @@ import Header from './components/Header'
 import TopBar from './components/TopBar'
 import { ThemeProvider, createTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles'
 import { blue, purple } from '@material-ui/core/colors'
-import { Paper } from '@material-ui/core'
+import { Paper, Box, Fade } from '@material-ui/core'
+import { css } from "@emotion/react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import './App.css';
 import {
@@ -16,6 +17,7 @@ import HomeContainer from "./components/Home/HomeContainer.js"
 import ProjectsContainer from "./components/Projects/ProjectsContainer.js"
 import Work from "./components/Work/Work.js"
 import ComingSoon from "./components/ComingSoon.js"
+import Loader from "react-loader-spinner";
 
 // Pet Social Pictures Import
 import PetSocialLogo from "./images/pet-social/pet-social-logo.jpg"
@@ -65,16 +67,17 @@ import ModManScreenshotTwo from "./images/modman/modman-ss2.png"
 import RC4WelfareLogo from "./images/rc4welfare/rc4welfare.png"
 import RC4WelfareScreenshotOne from "./images/rc4welfare/rc4welfare-ss1.png"
 import RC4WelfareScreenshotTwo from "./images/rc4welfare/rc4welfare-ss2.png"
+import React from 'react'
 
 let customTheme = createTheme({
   palette: {
     primary: {
       // Grey
-      main: '#00adb5',
+      main: '#b8f2e6',
     },
     secondary: {
       // Teal
-      main: '#e1edeb',
+      main: '#aed9e0',
     },
     background: {
       // Darker Grey
@@ -112,8 +115,22 @@ const styles = {
   }
 };
 
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+
 function App() {
   const classes = useStyles();
+  const [loading, setLoading] = React.useState(true);
+  const [color, setColor] = React.useState("#e1edeb");
+
+  React.useEffect(()=>{
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000)
+  },[])
 
   let data = {
     projects: [{
@@ -190,27 +207,39 @@ function App() {
     }]
   }
 
-  return (
+  return loading === true ? (
+  <Box display="flex" justifyContent="center" alignItems="center" width="100vw" height="100vh">
+    <Loader
+      type="Grid"
+      color="#00BFFF"
+      height={100}
+      width={100}
+      timeout={3000} //3 secs
+    />
+  </Box>
+  ) : (
     <Router>
-      <div width="fluid" className="App-background">
-        <ThemeProvider theme = {customTheme}>
-          <CssBaseline />
-          <TopBar />
-          <Switch>
-            <Route path="/projects">
-              <ProjectsContainer data={data}/>
-            </Route>
-            <Route path="/work">
-              <Work />
-            </Route>
-            <Route path="/">
-              <HomeContainer data={data}/>
-            </Route>
-          </Switch>
-        </ThemeProvider>
-      </div>
+      <Fade in={true}>
+        <div width="fluid" className="App-background">
+          <ThemeProvider theme = {customTheme}>
+            <CssBaseline />
+            <TopBar />
+            <Switch>
+              <Route path="/projects">
+                <ProjectsContainer data={data}/>
+              </Route>
+              <Route path="/work">
+                <Work />
+              </Route>
+              <Route path="/">
+                <HomeContainer loading={loading}/>
+              </Route>
+            </Switch>
+          </ThemeProvider>
+        </div>
+      </Fade>
     </Router>
-  );
+    );
 }
 
 export default App;
