@@ -109,6 +109,9 @@ const HomeContainer = ({ loading }) => {
                             <br></br>
                             <br></br>
                             More importantly, I’m a full stack developer and a technology enthusiast. I aim to make a difference in people’s lives through creating new technology that will benefit the world. I am deeply passionate about software development and I often spend my free time improving my knowledge and skills in building software. I strive for a career in Silicon Valley with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
+                            <br></br>
+                            <br></br>
+                            P.S. This site is currently 90% done. Coding from scratch is not easy!
                           </Typography>
                         </CardContent>
                       </Grid>
