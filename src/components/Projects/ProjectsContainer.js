@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectCard from "./ProjectCard.js"
-import { Card, CardActionArea, Grid, Dialog, withStyles, Paper, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, CardActionArea, Grid, Fade, Dialog, withStyles, Paper, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
 import Header from "../Home/Header.js"
 
 const useStyles = makeStyles((theme) => ({
@@ -33,6 +33,10 @@ const DarkTextTypography = withStyles({
 
 const ProjectsContainer = ({ data }) => {
   const classes = useStyles()
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const [open, setOpen] = React.useState(false);
 

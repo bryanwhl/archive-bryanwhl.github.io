@@ -2,7 +2,7 @@ import Header from './components/Header'
 import TopBar from './components/TopBar'
 import { ThemeProvider, createTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles'
 import { blue, purple } from '@material-ui/core/colors'
-import { Paper, Box, Fade } from '@material-ui/core'
+import { Paper, Box, Fade, Zoom, Fab } from '@material-ui/core'
 import { css } from "@emotion/react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import './App.css';
@@ -15,7 +15,7 @@ import {
 import BackgroundImage from "./images/background.jpg"
 import HomeContainer from "./components/Home/HomeContainer.js"
 import ProjectsContainer from "./components/Projects/ProjectsContainer.js"
-import Work from "./components/Work/Work.js"
+import WorkParent from "./components/Work/WorkParent.js"
 import ComingSoon from "./components/ComingSoon.js"
 import Loader from "react-loader-spinner";
 
@@ -67,23 +67,24 @@ import ModManScreenshotTwo from "./images/modman/modman-ss2.png"
 import RC4WelfareLogo from "./images/rc4welfare/rc4welfare.png"
 import RC4WelfareScreenshotOne from "./images/rc4welfare/rc4welfare-ss1.png"
 import RC4WelfareScreenshotTwo from "./images/rc4welfare/rc4welfare-ss2.png"
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import React from 'react'
 
 let customTheme = createTheme({
   palette: {
     primary: {
       // Grey
-      main: '#b8f2e6',
+      main: '#aed9e0',
     },
     secondary: {
       // Teal
-      main: '#aed9e0',
+      main: '#b8f2e6',
     },
     background: {
       // Darker Grey
-      default: '#263238',
+      default: '#ffffff',
       // Not-as-dark Grey
-      paper: '#3f4443'
+      paper: '#c9fbff'
     },
   },
   typography: {
@@ -121,6 +122,7 @@ const override = css`
   border-color: red;
 `;
 
+
 function App() {
   const classes = useStyles();
   const [loading, setLoading] = React.useState(true);
@@ -136,7 +138,7 @@ function App() {
     projects: [{
       projectName: "Pet Social (Orbital 2021)",
       projectLogo: PetSocialLogo,
-      projectDescription: "Pet Social is a social media platform built for <u>pet owners</u> to congregate and exchange information about owning a pet. It aims to eventually centralize and digitize every needs of a pet owner for their convenience.",
+      projectDescription: "Pet Social is a social media platform built for pet owners to congregate and exchange information about owning a pet. It aims to digitize every needs of a pet owner for their convenience and to create a global community of pet owners.",
       projectStack: "React (Material-UI Library), Node.js, Express.js, MongoDB, GraphQL, Apollo Client, Jest.js",
       projectLink: "https://github.com/bryanwhl/pet-social",
       projectScreenshots: [PetSocialScreenshotOne, PetSocialScreenshotTwo, PetSocialScreenshotThree, PetSocialScreenshotFour, PetSocialScreenshotFive]
@@ -144,7 +146,7 @@ function App() {
     {
       projectName: "DSO Search Engine",
       projectLogo: DSOLogo,
-      projectDescription: "Full-stack internship project for DSO. Worked on creating a Search Engine UI in Vue.js using Vuetify UI library, and a dockerized microservice for video and audio transcription. In addition, we built a metric dashboard to chart the health of the microservice using Grafana and Prometheus.",
+      projectDescription: "Created a Search Engine and a dockerized microservice for video and audio transcription for my summer internship at DSO National Laboratories. Also built a dashboard with metrics and charts that shows the health of the microservice.",
       projectStack: "Vue.js (Vuetify UI Library), Node.js, Express.js, Java Backend, ElasticSearch Database, Docker, Prometheus, Grafana",
       projectLink: "",
       projectScreenshots: [DSOScreenshotOne, DSOScreenshotTwo, DSOScreenshotThree, DSOScreenshotFour]
@@ -152,7 +154,7 @@ function App() {
     {
       projectName: "SBN Cookhouse Bot",
       projectLogo: SBNCookhouseLogo,
-      projectDescription: "A telegram bot that now serves more than 500 daily users, providing functionality for checking daily food menu of SAF Cookhouses.",
+      projectDescription: "Developed a telegram bot that now serves more than 500 daily users, providing functionality for checking daily food menu of canteens in the military.",
       projectStack: "Python, Telegram Bot API, SQLAlchemy, JavaScript",
       projectLink: "https://t.me/SBN_cookhouse_bot",
       projectScreenshots: [SBNCookhouseLogo, SBNCookhouseScreenshotTwo]
@@ -160,7 +162,7 @@ function App() {
     {
       projectName: "RC4FoodBud",
       projectLogo: RC4FoodBudLogo,
-      projectDescription: "RC4FoodBud was a winter break project. Together with friends in RC4 OrcaTech, the four of us build a telegram bot-and-channel system that connects RC4 residences through meals. We hoped to cultivate an open culture within the college where residences can meet new people easily through the bot.",
+      projectDescription: "Built a telegram bot over the winter break that connects college residents with each other through meals.",
       projectStack: "Python, Telegram Bot API",
       projectLink: "https://github.com/bryanwhl/RC4_FoodBuddy",
       projectScreenshots: [RC4FoodBudScreenshotOne, RC4FoodBudScreenshotTwo, RC4FoodBudScreenshotThree]
@@ -168,7 +170,7 @@ function App() {
     {
       projectName: "ModMan",
       projectLogo: ModManLogo,
-      projectDescription: "Short for Module Manager, ModMan is a desktop app designed to help teaching assistants (TAs) manage their module(s). It is optimized for use via a Command Line Interface (CLI). ModMan helps to track module details as well as students’ progress and data, all in one platform. It can also perform autograding for MCQ assignments.",
+      projectDescription: "Short for Module Manager, ModMan is a desktop app designed to help teaching assistants manage their module(s). It is optimized for use via a Command Line Interface (CLI). ModMan helps to track module details as well as students’ progress and data, all in one platform.",
       projectStack: "Java",
       projectLink: "https://github.com/bryanwhl/ModMan",
       projectScreenshots: [ModManScreenshotOne, ModManScreenshotTwo]
@@ -192,7 +194,7 @@ function App() {
     {
       projectName: "NUS Data Science Competition 2021",
       projectLogo: NusStatisticsLogo,
-      projectDescription: "Created a model that automates Computer Vision tasks as stated in the problem statement by the competition. Team emerged as a finalist team, clinching the Top 10 position of the competition out of more than 260 teams.",
+      projectDescription: "Created a model that automates supply chain tasks with Computer Vision algorithms (e.g. Feature Matching, Hough Transform, Thresholding). Team emerged as a finalist team, clinching the Top 10 position of the competition out of more than 260 teams.",
       projectStack: "Python, opencv2",
       projectLink: "https://github.com/bryanwhl/nus-data-science-competition-2021",
       projectScreenshots: [NusStatisticsScreenshotOne, NusStatisticsScreenshotTwo]
@@ -200,7 +202,7 @@ function App() {
     {
       projectName: "Hack & Roll 2021 - Timetable Generator",
       projectLogo: NUSModsTimetableLogo,
-      projectDescription: "A web app that generates an optimized timetable for an NUS student based on his/her customization and preferences. ",
+      projectDescription: "Built a web app that generates an optimized timetable for an NUS student based on his/her customization and preferences. Worked primary on the frontend of the application.",
       projectStack: "HTML, CSS, Bootstrap, Python, Flask",
       projectLink: "https://devpost.com/software/nusmods-timetable-generator",
       projectScreenshots: [NUSModsTimetableLogo, NUSModsScreenshotOne]
@@ -229,7 +231,7 @@ function App() {
                 <ProjectsContainer data={data}/>
               </Route>
               <Route path="/work">
-                <Work />
+                <WorkParent />
               </Route>
               <Route path="/">
                 <HomeContainer loading={loading}/>

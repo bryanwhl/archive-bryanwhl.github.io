@@ -2,13 +2,15 @@ import React from 'react'
 import BackgroundImage from "../../images/background.jpg"
 import AvatarImage from "../../images/avatar.jpg"
 import ProjectCard from "./ProjectCard.js"
-import { Card, Grid, Fade, Zoom, withStyles, Paper, Typography, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, Grid, Fade, Zoom, Tooltip, withStyles, Paper, Fab, Typography, Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, CardContent, Avatar, makeStyles, Divider, CardMedia } from '@material-ui/core';
 import resumeLink from "../../images/BryanWong_CV.pdf"
 import PersonalPicture from "../../images/background3.jpg"
 import SkillsPaper from "./SkillsPaper.js"
 import FindOutMore from "./FindOutMore.js"
 import HobbiesPaper from "./HobbiesPaper.js"
+import ContactMe from "./ContactMe.js"
 import Header from "./Header.js"
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -46,6 +48,11 @@ const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 700,
   },
+  fab: {
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  },
 }))
 
 const DarkTextTypography = withStyles({
@@ -57,11 +64,19 @@ const DarkTextTypography = withStyles({
 const HomeContainer = ({ loading }) => {
   const classes = useStyles()
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div>
-      <Zoom in={loading === true} timeout={4000}>
+      <Fade in={true}>
         <Header />
-      </Zoom>
+      </Fade>
       <Grid
         container
         direction="column"
@@ -71,6 +86,7 @@ const HomeContainer = ({ loading }) => {
       >
         <Box width="70%">
           <Grid item>
+            <Fade in={true}>
               <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
                 <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
                   <Typography variant="h4" style={{ textDecoration: 'underline' }}>
@@ -89,10 +105,10 @@ const HomeContainer = ({ loading }) => {
                       <Grid container item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <CardContent>
                           <Typography variant="body2" color="text.secondary" component="div">
-                            Welcome to my site! I’m Bryan Wong, a penultimate year Computer Engineering student from National University of Singapore (NUS). I currently hold a GPA of 4.67/5.0 and I’m on track to graduate with a First Class Honours degree. I’m also part of the Engineering Scholars Programme, a bond-free scholarship programme in NUS given to the top engineering students of each cohort.
+                            Welcome to my site! I’m Bryan Wong, a penultimate year Computer Engineering student from National University of Singapore (NUS). I’m part of the Engineering Scholars Programme, a bond-free scholarship programme in NUS given to the top engineering students of each cohort. I also hold a GPA of 4.67 out of 5.
                             <br></br>
                             <br></br>
-                            More importantly, I’m a full stack developer and a technology enthusiast. I aim to make a difference in people’s lives through creating new technology that will benefit the world. I strive for a career in Silicon Valley with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
+                            More importantly, I’m a full stack developer and a technology enthusiast. I aim to make a difference in people’s lives through creating new technology that will benefit the world. I am deeply passionate about software development and I often spend my free time improving my knowledge and skills in building software. I strive for a career in Silicon Valley with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
                           </Typography>
                         </CardContent>
                       </Grid>
@@ -102,22 +118,45 @@ const HomeContainer = ({ loading }) => {
         
                 <Box pb={5} />
               </Paper>
+            </Fade>
+            <Box mt={15} />
+
+            <Fade in={true}>
+              <SkillsPaper />
+            </Fade>
+
+            <Box mt={15} />
+            
+            <Fade in={true}>
+              <FindOutMore />
+            </Fade>
 
             <Box mt={15} />
 
-            <SkillsPaper />
+            <Fade in={true}>
+              <HobbiesPaper />
+            </Fade>
 
             <Box mt={15} />
 
-            <FindOutMore />
+            <Fade in={true}>
+              <ContactMe />
+            </Fade>
 
-            <Box mt={15} />
-
-            <HobbiesPaper />
+            <Box mb={15} />
       
           </Grid>
         </Box>
       </Grid>
+      <Zoom
+        in={true}
+      >
+        <Tooltip title="Back To Top" aria-label="Back To Top">
+          <Fab color="secondary" className={classes.fab} onClick={scrollToTop}>
+            <ArrowUpwardIcon />
+          </Fab>
+        </Tooltip>
+      </Zoom>
     </div>
   )
 }

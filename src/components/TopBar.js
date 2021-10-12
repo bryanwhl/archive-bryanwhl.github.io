@@ -1,4 +1,4 @@
-import {Typography, IconButton, Divider, AppBar, Box, Card, Link, CardActions, Button, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container} from '@material-ui/core';
+import {Typography, IconButton, Divider, AppBar, Box, Hidden, Card, Link, CardActions, Button, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container} from '@material-ui/core';
 import CodeIcon from '@material-ui/icons/Code';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -48,20 +48,22 @@ const TopBar = () => {
                 </Typography>
               </Button>
             </Grid>
-            <Grid container spacing={1} alignItems="center" justify="flex-end" wrap="nowrap">
-              <IconButton href="https://www.github.com/bryanwhl">
-                <GitHubIcon />
-              </IconButton>
-              <IconButton href="https://www.instagram.com/bryanwhl">
-                <InstagramIcon />
-              </IconButton>
-              <IconButton href="https://www.linkedin.com/in/bryan-wong-91b323156/">
-                <LinkedInIcon />
-              </IconButton>
-              <IconButton href="https://www.facebook.com/bryanwhl1">
-                <FacebookIcon />
-              </IconButton>
-            </Grid>
+            <Hidden smDown>
+              <Grid container spacing={1} alignItems="center" justify="flex-end" wrap="nowrap">
+                <IconButton href="https://www.github.com/bryanwhl">
+                  <GitHubIcon />
+                </IconButton>
+                <IconButton href="https://www.instagram.com/bryanwhl">
+                  <InstagramIcon />
+                </IconButton>
+                <IconButton href="https://www.linkedin.com/in/bryan-wong-91b323156/">
+                  <LinkedInIcon />
+                </IconButton>
+                <IconButton href="https://www.facebook.com/bryanwhl1">
+                  <FacebookIcon />
+                </IconButton>
+              </Grid>
+            </Hidden>
           </Toolbar>
       </AppBar>
     </div>

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%"
   },
   innerPaper: {
-    padding: theme.spacing(13),
+    padding: theme.spacing(5),
     width: "100%"
   },
   divider: {
@@ -45,7 +45,7 @@ const ProjectSection = ( { project } ) => {
         <Grid container direction="column" alignItems="center" justify="center">
           <Grid item>
             <Box pb={5}>
-              <Typography gutterBottom variant="h2" color="secondary">
+              <Typography gutterBottom variant="h4">
                 {ReactHtmlParser(project.projectName)}
               </Typography>
             </Box>
@@ -61,16 +61,17 @@ const ProjectSection = ( { project } ) => {
             <Grid container direction="column" justify="start">
               <Box pb={5}>
                 <Grid item> 
-                  <Typography variant="h5" color="secondary">
+                  <Typography variant="h5">
                     Description:
                   </Typography>
+                  <br></br>
                   <Typography variant="subtitle1">
                     {ReactHtmlParser(project.projectDescription)}
                   </Typography>
                 </Grid>
               </Box>
               <Grid item>
-                <Typography variant="h5" color="secondary">
+                <Typography variant="h5">
                   Tech Stack:
                 </Typography>
                 <Typography variant="subtitle1">
@@ -80,8 +81,10 @@ const ProjectSection = ( { project } ) => {
               <br></br>
               <br></br>
               {project.projectLink !== '' ? <Grid item>
-                <Button variant="contained" color="secondary" href={project.projectLink}>
-                  Visit Project Here!
+                <Button variant="contained" color="primary" href={project.projectLink}>
+                  <Typography variant="subtitle2">
+                    Visit Project Here!
+                  </Typography>
                 </Button>
               </Grid> : null}
             </Grid>

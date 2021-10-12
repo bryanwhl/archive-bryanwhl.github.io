@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%"
   },
   subCard: {
-    minWidth: "50vmin",
-    maxWidth: "50vmin",
+    minWidth: "92%",
+    maxWidth: "92%",
     margin: 20,
   },
   cardMedia: {
@@ -58,7 +58,6 @@ const HobbiesPaper = () => {
     "Vice-President of Engineering Scholars Programme Committee",
     "Vice-President of College Student Committee (IT Committee)",
     "Project Head of Technology Community, OrcaTech, in college",
-    "Vice-President of Gaming Club in College"
   ];
 
   const interests = [
@@ -67,7 +66,8 @@ const HobbiesPaper = () => {
     "Blog about food on <a href='https://instagram.com/bryanwhl_food'>instagram</a>",
     "Solve leetcode and programming challenges online",
     "Play the double bass and bass guitar",
-    "Volunteer at charity and community events"
+    "Volunteer at charity and community events",
+    "Play League Of Legends"
   ];
 
   return (
@@ -105,7 +105,7 @@ const HobbiesPaper = () => {
             <Grid item>
               <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
                 <Grid container>
-                  <Grid container item xs={12} sm={12} md={6} display="flex" justifyContent="center">
+                  <Grid container item xs={12} sm={12} md={12} lg={6} display="flex" justifyContent="center">
                     <Card className={classes.subCard} style={{backgroundColor: "#d3f2e5"}}>
                       <CardHeader style={{ textAlign: 'center' }} title="Extracurricular" />
                       <CardContent>
@@ -124,7 +124,7 @@ const HobbiesPaper = () => {
                       </CardContent>
                     </Card>
                   </Grid>
-                  <Grid container item xs={12} sm={12} md={6} display="flex" justifyContent="center">
+                  <Grid container item xs={12} sm={12} md={12} lg={6} display="flex" justifyContent="center">
                     <Card className={classes.subCard} style={{backgroundColor: "#d3f2e5"}}>
                       <CardHeader style={{ textAlign: 'center' }} title="Hobbies" />
                       <CardContent>

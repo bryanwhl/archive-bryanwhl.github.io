@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectSection from "./ProjectSection.js"
-import { Card, CardActionArea, Grid, Dialog, withStyles, Paper, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, CardActionArea, Grid, Dialog, withStyles, Paper, Fade, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
 import Header from "../Home/Header.js"
 
 const useStyles = makeStyles((theme) => ({
@@ -39,29 +39,31 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <Box display="flex" justifyContent="center">
-      <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
-        <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-          <CardActionArea onClick={handleClickOpen}>
-            <CardMedia
-              className={classes.cardMedia}
-              image={project.projectLogo}
-            />
-            <Typography
-              gutterBottom
-              variant="h6"
-              component="h6"
-              className={classes.font}
-            >
-              {project.projectName}
-            </Typography>
-          </CardActionArea>
-          <Dialog fullWidth maxWidth='lg' onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-            <ProjectSection project={project} handleClose={handleClose} />
-          </Dialog>
-        </Card>
-      </Grid>
-    </Box>
+    <Fade in={true}>
+      <Box display="flex" justifyContent="center">
+        <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
+          <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+            <CardActionArea onClick={handleClickOpen}>
+              <CardMedia
+                className={classes.cardMedia}
+                image={project.projectLogo}
+              />
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="h6"
+                className={classes.font}
+              >
+                {project.projectName}
+              </Typography>
+            </CardActionArea>
+            <Dialog fullWidth maxWidth='lg' onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+              <ProjectSection project={project} handleClose={handleClose} />
+            </Dialog>
+          </Card>
+        </Grid>
+      </Box>
+    </Fade>
   )
 }
 

@@ -160,7 +160,7 @@ const SkillsPaper = () => {
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
+                    <Typography variant="h6" style={{fontWeight: 600}} noWrap>
                       <StorageIcon style={{ fontSize: 18 }} />
                       &nbsp;&nbsp;API &amp; Database
                     </Typography>
@@ -184,7 +184,7 @@ const SkillsPaper = () => {
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
+                    <Typography variant="h6" style={{fontWeight: 600}} noWrap>
                       <AssignmentIcon style={{ fontSize: 18 }} />
                       &nbsp;DevOps / Management
                     </Typography>
