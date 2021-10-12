@@ -62,10 +62,10 @@ const Header = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Avatar src={AvatarImage} style={{ height: '160px', width: '160px', animationName: "mymove", animationDuration: 4 }} />
               <Box pt={2} />
-              <Typography style={{color:"#00adb5"}} variant="h5" component="div">
+              <Typography style={{color:"#80ed99"}} variant="h5" component="div">
                 Hi, I'm Bryan,
               </Typography>
-              <Typography style={{color:"#00adb5"}} variant="h5" component="div">
+              <Typography style={{color:"#80ed99"}} variant="h5" component="div">
                 a Full Stack Developer.
               </Typography>
               <Box paddingTop={3} />

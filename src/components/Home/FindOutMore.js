@@ -11,6 +11,7 @@ import AndroidIcon from '@material-ui/icons/Android';
 import LanguageIcon from '@material-ui/icons/Language';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -37,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
 const FindOutMore = () => {
   const classes = useStyles()
+  let history = useHistory();
 
   const languages = [
     "JavaScript",
@@ -101,7 +103,7 @@ const FindOutMore = () => {
           <Grid container className={classes.root}>
             <Grid container item xs={12} sm={12} md={12} lg={6} xl={6} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardActionArea>
+                <CardActionArea href="/projects">
                   <CardMedia
                     className={classes.cardMedia}
                     image={ProjectImage}
@@ -119,7 +121,7 @@ const FindOutMore = () => {
             </Grid>
             <Grid container item xs={12} sm={12} md={12} lg={6} xl={6} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardActionArea>
+                <CardActionArea href="/work">
                   <CardMedia
                     className={classes.cardMedia}
                     image={WorkImage}
