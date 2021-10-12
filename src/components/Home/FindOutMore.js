@@ -103,7 +103,7 @@ const FindOutMore = () => {
           <Grid container className={classes.root}>
             <Grid container item xs={12} sm={12} md={12} lg={6} xl={6} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardActionArea href="/bryanwhl.github.io/projects">
+                <CardActionArea href="https://bryanwhl.github.io/bryanwhl.github.io#/projects">
                   <CardMedia
                     className={classes.cardMedia}
                     image={ProjectImage}
@@ -121,7 +121,7 @@ const FindOutMore = () => {
             </Grid>
             <Grid container item xs={12} sm={12} md={12} lg={6} xl={6} display="flex" justifyContent="center">
               <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
-                <CardActionArea href="/bryanwhl.github.io/work">
+                <CardActionArea href="https://bryanwhl.github.io/bryanwhl.github.io#/work">
                   <CardMedia
                     className={classes.cardMedia}
                     image={WorkImage}
