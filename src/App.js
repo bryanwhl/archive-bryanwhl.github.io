@@ -7,7 +7,7 @@ import { css } from "@emotion/react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
