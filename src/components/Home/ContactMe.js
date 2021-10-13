@@ -72,7 +72,7 @@ const ContactMe = () => {
         </Typography>
       </Box>
       <Box display="flex" justifyContent="center">
-        <Box width="50vmin">
+        <Box width="57vmin">
           <List>
             <ListItem>
               <ListItemAvatar>
@@ -80,12 +80,12 @@ const ContactMe = () => {
                   <EmailIcon />
                 </Avatar>
               </ListItemAvatar>
-              <Hidden smDown>
+              <Hidden mdDown>
                 <ListItemText
                   primary="bryanwhl1999@gmail.com"
                 />
               </Hidden>
-              <Hidden mdUp>
+              <Hidden lgUp>
                 <ListItemText
                   primary="Email"
                 />
@@ -109,12 +109,12 @@ const ContactMe = () => {
                   <PhoneIphoneIcon />
                 </Avatar>
               </ListItemAvatar>
-              <Hidden smDown>
+              <Hidden mdDown>
                 <ListItemText
                   primary="+65 9385 8356"
                 />
               </Hidden>
-              <Hidden mdUp>
+              <Hidden lgUp>
                 <ListItemText
                   primary="Contact"
                 />
