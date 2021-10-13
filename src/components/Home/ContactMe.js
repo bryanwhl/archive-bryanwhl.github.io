@@ -21,6 +21,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import CropPortraitIcon from '@material-ui/icons/CropPortrait';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyrightIcon from '@material-ui/icons/Copyright';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -66,7 +67,7 @@ const ContactMe = () => {
 
   return (
     <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-      <Box display="flex" justifyContent="center" alignItems="center" id="projects" pt={10} mb={2}>
+      <Box display="flex" justifyContent="center" alignItems="center" id="projects" pt={10} mb={5}>
         <Typography variant="h4" style={{ textDecoration: 'underline' }}>
           Contact Me
         </Typography>
@@ -134,6 +135,13 @@ const ContactMe = () => {
             </ListItem>
           </List>
         </Box>
+      </Box>
+      <Box pb={10} />
+      <Box display="flex" justifyContent="center">
+        <Typography variant="body2">
+          <CopyrightIcon style={{ textDecoration: 'bold', fontSize: 15 }} />
+          &nbsp;2021, Bryan Wong
+        </Typography>
       </Box>
       <Box pb={5} />
     </Paper>

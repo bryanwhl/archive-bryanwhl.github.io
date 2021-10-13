@@ -17,6 +17,8 @@ import FoodImage from "../../images/interests/food.jpg"
 import SwimImage from "../../images/interests/swim.jpg"
 import KattisImage from "../../images/interests/kattis.png"
 import ReactHtmlParser from 'react-html-parser';
+import PoolIcon from '@material-ui/icons/Pool';
+import ListAltIcon from '@material-ui/icons/ListAlt';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -107,8 +109,13 @@ const HobbiesPaper = () => {
                 <Grid container>
                   <Grid container item xs={12} sm={12} md={12} lg={6} display="flex" justifyContent="center">
                     <Card className={classes.subCard} style={{backgroundColor: "#d3f2e5"}}>
-                      <CardHeader style={{ textAlign: 'center' }} title="Extracurricular" />
                       <CardContent>
+                        <Box display="flex" justifyContent="center">
+                          <Typography variant="h6" style={{fontWeight: 600}}>
+                            <ListAltIcon style={{ fontSize: 18 }} />
+                            &nbsp;Extracurricular
+                          </Typography>
+                        </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>
                           <ul>
                             {leadership.map(cca => {
@@ -126,8 +133,13 @@ const HobbiesPaper = () => {
                   </Grid>
                   <Grid container item xs={12} sm={12} md={12} lg={6} display="flex" justifyContent="center">
                     <Card className={classes.subCard} style={{backgroundColor: "#d3f2e5"}}>
-                      <CardHeader style={{ textAlign: 'center' }} title="Hobbies" />
                       <CardContent>
+                        <Box display="flex" justifyContent="center">
+                          <Typography variant="h6" style={{fontWeight: 600}}>
+                            <PoolIcon style={{ fontSize: 18 }} />
+                            &nbsp;Hobbies
+                          </Typography>
+                        </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems:'start'}}>
                           <ul>
                             {interests.map(interest => {

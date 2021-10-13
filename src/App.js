@@ -58,6 +58,11 @@ import RC4FoodBudScreenshotOne from "./images/RC4FoodBud/rc4foodbud-ss1.jpg"
 import RC4FoodBudScreenshotTwo from "./images/RC4FoodBud/rc4foodbud-ss2.png"
 import RC4FoodBudScreenshotThree from "./images/RC4FoodBud/rc4foodbud-ss3.png"
 
+// Facebook Comments Pictures Import
+import FacebookLogo from "./images/facebook-comments/FacebookLogo.png"
+import FacebookScreenshotOne from "./images/facebook-comments/facebook-ss1.png"
+import FacebookScreenshotTwo from "./images/facebook-comments/facebook-ss2.png"
+
 // ModMan Pictures Import
 import ModManLogo from "./images/modman/modman.png"
 import ModManScreenshotOne from "./images/modman/modman-ss1.png"
@@ -74,7 +79,7 @@ let customTheme = createTheme({
   palette: {
     primary: {
       // Grey
-      main: '#aed9e0',
+      main: '#34a0a4',
     },
     secondary: {
       // Teal
@@ -160,12 +165,12 @@ function App() {
       projectScreenshots: [SBNCookhouseLogo, SBNCookhouseScreenshotTwo]
     },
     {
-      projectName: "RC4FoodBud",
-      projectLogo: RC4FoodBudLogo,
-      projectDescription: "Built a telegram bot over the winter break that connects college residents with each other through meals.",
-      projectStack: "Python, Telegram Bot API",
-      projectLink: "https://github.com/bryanwhl/RC4_FoodBuddy",
-      projectScreenshots: [RC4FoodBudScreenshotOne, RC4FoodBudScreenshotTwo, RC4FoodBudScreenshotThree]
+      projectName: "Facebook Comments Volume Prediction",
+      projectLogo: FacebookLogo,
+      projectDescription: "(Ongoing Project) Working on a Machine Learning project with a group of 5 to predict comment volume of facebook posts based on a set of characteristic of the facebook post. Currently working on implementing Neural Networks and a Multilayer perceptron model using scikit-learn,  as well as to experiment with other models to maximize the accuracy of the prediction.",
+      projectStack: "Python, scikit-learn, Keras, pandas, NumPy",
+      projectLink: "https://github.com/bryanwhl/facebook-comments",
+      projectScreenshots: [FacebookScreenshotOne, FacebookScreenshotTwo]
     },
     {
       projectName: "ModMan",
@@ -180,7 +185,7 @@ function App() {
       projectLogo: RC4WelfareLogo,
       projectDescription: "A web application + telegram bot that automates the welfare distribution system within RC4. The web application serves as a dashboard for the administrator (Director of Welfare) to manage welfare events and to do any administrative tasks required for an event. The telegram bot is meant for RC4 residences to sign up for welfare and to automate any administrative tasks required from the residences.",
       projectStack: "React (React-Boostrap UI), Node.js, Python, Flask, SQLite Database, REST API",
-      projectLink: "https://github.com/bryanleongys/rc4welfarebot",
+      projectLink: "https://t.me/rc4welfarebot",
       projectScreenshots: [RC4WelfareScreenshotOne, RC4WelfareScreenshotTwo]
     }],
     hackathons: [{

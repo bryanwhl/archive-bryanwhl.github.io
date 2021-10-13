@@ -49,14 +49,17 @@ const SkillsPaper = () => {
     "Pandas",
     "OpenCV",
     "NumPy",
+    "Matplotlib",
     "scikit-learn",
+    "Keras",
     "Tableau",
-    "R",
+    "R"
   ];
 
   const dataBase = [
     "MongoDB",
     "SQL (SQLite, PostGreSQL, SQLAlchemy)",
+    "Elasticsearch",
     "GraphQL",
     "REST API",
     "Apollo Client",

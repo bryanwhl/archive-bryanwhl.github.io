@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50vmin",
     position: "relative",
     margin: 20,
+    transition: "transform 0.15s ease-in-out",
+  },
+  cardHovered: {
+    transform: "scale3d(1.05, 1.05, 1)"
   },
   cardMedia: {
     width: '100%',
@@ -38,7 +42,15 @@ const useStyles = makeStyles((theme) => ({
 
 const FindOutMore = () => {
   const classes = useStyles()
-  let history = useHistory();
+  const [state, setState] = React.useState({
+    raised:false,
+    shadow:1,
+  })
+
+  const [stateTwo, setStateTwo] = React.useState({
+    raised:false,
+    shadow:1,
+  })
 
   const languages = [
     "JavaScript",
@@ -90,6 +102,7 @@ const FindOutMore = () => {
     "Grafana",
     "Jira",
   ]
+  
 
   return (
     <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
@@ -102,7 +115,14 @@ const FindOutMore = () => {
         <Box width="80%">
           <Grid container className={classes.root}>
             <Grid container item xs={12} sm={12} md={12} lg={6} xl={6} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+              <Card 
+                className={classes.card} 
+                style={{backgroundColor: "#d3f2e5"}} 
+                classes={{root: state.raised ? classes.cardHovered : ""}}
+                onMouseOver={()=>setState({ raised: true, shadow:3})} 
+                onMouseOut={()=>setState({ raised:false, shadow:1 })} 
+                raised={state.raised} zdepth={state.shadow}
+              >
                 <CardActionArea href="https://bryanwhl.github.io/bryanwhl.github.io#/projects">
                   <CardMedia
                     className={classes.cardMedia}
@@ -120,7 +140,14 @@ const FindOutMore = () => {
               </Card>
             </Grid>
             <Grid container item xs={12} sm={12} md={12} lg={6} xl={6} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+              <Card 
+                className={classes.card} 
+                style={{backgroundColor: "#d3f2e5"}} 
+                classes={{root: stateTwo.raised ? classes.cardHovered : ""}}
+                onMouseOver={()=>setStateTwo({ raised: true, shadow:3})} 
+                onMouseOut={()=>setStateTwo({ raised:false, shadow:1 })} 
+                raised={stateTwo.raised} zdepth={stateTwo.shadow}
+              >
                 <CardActionArea href="https://bryanwhl.github.io/bryanwhl.github.io#/work">
                   <CardMedia
                     className={classes.cardMedia}
