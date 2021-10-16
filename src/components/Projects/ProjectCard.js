@@ -9,6 +9,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50vmin",
     position: "relative",
     margin: 20,
+    transition: "transform 0.15s ease-in-out",
+  },
+  cardHovered: {
+    transform: "scale3d(1.05, 1.05, 1)"
   },
   cardMedia: {
     width: '100%',
@@ -29,6 +33,10 @@ const ProjectCard = ({ project }) => {
   const classes = useStyles()
 
   const [open, setOpen] = React.useState(false);
+  const [state, setState] = React.useState({
+    raised:false,
+    shadow:1,
+  })
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -42,7 +50,14 @@ const ProjectCard = ({ project }) => {
     <Fade in={true}>
       <Box display="flex" justifyContent="center">
         <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
-          <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+          <Card 
+            className={classes.card} 
+            style={{backgroundColor: "#d3f2e5"}}
+            classes={{root: state.raised ? classes.cardHovered : ""}}
+            onMouseOver={()=>setState({ raised: true, shadow:3})} 
+            onMouseOut={()=>setState({ raised:false, shadow:1 })} 
+            raised={state.raised} zdepth={state.shadow}
+          >
             <CardActionArea onClick={handleClickOpen}>
               <CardMedia
                 className={classes.cardMedia}

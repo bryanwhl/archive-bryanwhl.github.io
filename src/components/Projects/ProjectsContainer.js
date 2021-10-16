@@ -1,7 +1,8 @@
 import React from 'react'
 import ProjectCard from "./ProjectCard.js"
-import { Card, CardActionArea, Grid, Fade, Dialog, withStyles, Paper, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, CardActionArea, Grid, Zoom, Tooltip, Fab, Fade, Dialog, withStyles, Paper, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
 import Header from "../Home/Header.js"
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -22,7 +23,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "white",
     textDecoration: 'underline',
-  }
+  },
+  fab: {
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  },
 }))
 
 const DarkTextTypography = withStyles({
@@ -38,15 +44,9 @@ const ProjectsContainer = ({ data }) => {
     window.scrollTo(0, 0)
   }, [])
 
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (value) => {
-    setOpen(false);
-  };
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <div>
@@ -98,11 +98,21 @@ const ProjectsContainer = ({ data }) => {
                     </Grid>
                   </Box>
                 </Box>
+                <Box pb={15} />
               </Paper>
           </Grid>
         </Box>
-        <Box pb={5} />
+        <Box pb={15} />
       </Grid>
+      <Zoom
+        in={true}
+      >
+        <Tooltip title="Back To Top" aria-label="Back To Top">
+          <Fab color="secondary" className={classes.fab} onClick={scrollToTop}>
+            <ArrowUpwardIcon />
+          </Fab>
+        </Tooltip>
+      </Zoom>
     </div>
   )
 }

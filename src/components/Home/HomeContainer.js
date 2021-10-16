@@ -104,11 +104,41 @@ const HomeContainer = ({ loading }) => {
                       </Grid>
                       <Grid container item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <CardContent>
+                          <ul>
+                            <li>
+                              <Typography variant="subtitle2">
+                                Name: Bryan Wong
+                              </Typography>
+                            </li>
+                            <li>
+                              <Typography variant="subtitle2">
+                                Age: 22
+                              </Typography>
+                            </li>
+                            <li>
+                              <Typography variant="subtitle2">
+                                Education: Computer Engineering Undergraduate (Penultimate Year) at National University of Singapore
+                              </Typography>
+                            </li>
+                            <li>
+                              <Typography variant="subtitle2">
+                                Scholarship: Engineering Scholars Programme (bond-free scholarship programme given to the top engineering students in NUS)
+                              </Typography>
+                            </li>
+                            <li>
+                              <Typography variant="subtitle2">
+                                GPA: 4.67/5.0 (Highest Distinction)
+                              </Typography>
+                            </li>
+                            <li>
+                              <Typography variant="subtitle2">
+                                Graduating by: May 2023
+                              </Typography>
+                            </li>
+                          </ul>
                           <Typography variant="body2" color="text.secondary" component="div">
-                            Hi there! I’m Bryan Wong, a penultimate year Computer Engineering student from National University of Singapore (NUS), 22-year-old male hailing from Singapore. I’m part of the Engineering Scholars Programme, a bond-free scholarship programme in NUS given to the top engineering students of each cohort. I also hold a GPA of 4.67 out of 5.
                             <br></br>
-                            <br></br>
-                            More importantly, I’m a full stack developer and a technology enthusiast. I aim to make a difference in people’s lives through creating new technology that will benefit the world. I am deeply passionate about software development and I often spend my free time improving my knowledge and skills in building software. I strive for a career in Silicon Valley with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
+                            Hi there! I’m a full stack developer with a keen passion in technlogy. I aim to make a difference in people’s lives through creating new technology that will benefit the world. I spend my free time working on software projects and on improving my technical skills. I'm also deeply interested in Computer Vision and Machine Learning, as well as UI/UX design to maximize the usability of applications that I develop. I strive for a career in Silicon Valley with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
                             <br></br>
                             <br></br>
                             P.S. I'm at 90% progress with this site. Coding from scratch is not easy!

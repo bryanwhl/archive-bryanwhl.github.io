@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Fade, CardActionArea, CardContent, Grid, withStyles, Paper, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, Fade, CardActionArea, Zoom, Tooltip, Fab, CardContent, Grid, withStyles, Paper, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
 import Header from "../Home/Header.js";
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
@@ -11,6 +11,7 @@ import DSO from "../../images/dsotransparent.png"
 import ProtosLabs from "../../images/protoslabs.png"
 import SAF from "../../images/saf.png"
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -42,6 +43,11 @@ const useStyles = makeStyles((theme) => ({
     // TODO: adjust this value accordingly
     flex: 0.4
   },
+  fab: {
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  },
 }))
 
 const Work = () => {
@@ -50,6 +56,10 @@ const Work = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  }
 
   const protoslabs = [
     "Worked alongside 2 cofounders in a pre-seed stage Cybersecurity startup doing web development, backend development and architecture development",
@@ -69,7 +79,8 @@ const Work = () => {
     "Built a telegram bot that serves more than 500 daily users, providing functionality for checking canteen menu daily",
     "Explored and tested Computer Vision algorithms for image processing and noise removal, followed by using tesseract OCR for text extraction",
     "Worked on the backend of a web application that provides navigation functionality on a map",
-    "Automated processes and workflows on Microsoft Excel using VBA"
+    "Automated processes and workflows on Microsoft Excel using VBA",
+    "Awarded Best Soldier of the Month for my technology contributions to the unit"
   ]
 
   return (
@@ -207,6 +218,15 @@ const Work = () => {
           <Box mb={15} />
         </Box>
       </Grid>
+      <Zoom
+        in={true}
+      >
+        <Tooltip title="Back To Top" aria-label="Back To Top">
+          <Fab color="secondary" className={classes.fab} onClick={scrollToTop}>
+            <ArrowUpwardIcon />
+          </Fab>
+        </Tooltip>
+      </Zoom>
     </div>
   )
 }

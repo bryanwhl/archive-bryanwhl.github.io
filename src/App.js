@@ -143,16 +143,16 @@ function App() {
     projects: [{
       projectName: "Pet Social (Orbital 2021)",
       projectLogo: PetSocialLogo,
-      projectDescription: "Pet Social is a social media platform built for pet owners to congregate and exchange information about owning a pet. It aims to digitize every needs of a pet owner for their convenience and to create a global community of pet owners.",
-      projectStack: "React (Material-UI Library), Node.js, Express.js, MongoDB, GraphQL, Apollo Client, Jest.js",
+      projectDescription: "Pet Social is a social media platform built for pet owners to congregate and exchange information about owning a pet. It aims to digitize every needs of a pet owner for their convenience and to create a global community of pet owners. At its current state, Pet Social is a full-fledged social media site with vast features implemented. The project is also well documented. The project attained the highest level of achievement for Orbital Programme 2021, an indepedent software engineering project programme by NUS.",
+      projectStack: "React (Material-UI Library), Node.js, Express.js, MongoDB, GraphQL, Apollo Client, Jest.js, Amazon Web Services EC2",
       projectLink: "https://github.com/bryanwhl/pet-social",
       projectScreenshots: [PetSocialScreenshotOne, PetSocialScreenshotTwo, PetSocialScreenshotThree, PetSocialScreenshotFour, PetSocialScreenshotFive]
     },
     {
       projectName: "DSO Search Engine",
       projectLogo: DSOLogo,
-      projectDescription: "Created a Search Engine and a dockerized microservice for video and audio transcription for my summer internship at DSO National Laboratories. Also built a dashboard with metrics and charts that shows the health of the microservice.",
-      projectStack: "Vue.js (Vuetify UI Library), Node.js, Express.js, Java Backend, ElasticSearch Database, Docker, Prometheus, Grafana",
+      projectDescription: "Created a Search Engine and a dockerized microservice for video and audio transcription for my summer internship at DSO National Laboratories. Also built a dashboard with metrics and charts that shows the health of the microservice. This project was done over a summer internship at DSO National Laboratories.",
+      projectStack: "Vue.js (Vuetify UI Library), Node.js, Express.js, Java Backend, Elasticsearch Database, Docker, Prometheus, Grafana",
       projectLink: "",
       projectScreenshots: [DSOScreenshotOne, DSOScreenshotTwo, DSOScreenshotThree, DSOScreenshotFour]
     },
@@ -183,8 +183,8 @@ function App() {
     {
       projectName: "RC4 Welfare System",
       projectLogo: RC4WelfareLogo,
-      projectDescription: "A web application + telegram bot that automates the welfare distribution system within RC4. The web application serves as a dashboard for the administrator (Director of Welfare) to manage welfare events and to do any administrative tasks required for an event. The telegram bot is meant for RC4 residences to sign up for welfare and to automate any administrative tasks required from the residences.",
-      projectStack: "React (React-Boostrap UI), Node.js, Python, Flask, SQLite Database, REST API",
+      projectDescription: "A web application + telegram bot that automates the welfare distribution system within college. The web application serves as a dashboard for an administrator to manage welfare events and to perform any administrative tasks required for a welfare event. The telegram bot is meant for college residents to sign up for welfare and to automate any administrative tasks required from the residents.",
+      projectStack: "React (React-Bootstrap UI), Node.js, Python, Flask, SQLite Database, REST API",
       projectLink: "https://t.me/rc4welfarebot",
       projectScreenshots: [RC4WelfareScreenshotOne, RC4WelfareScreenshotTwo]
     }],
@@ -199,7 +199,7 @@ function App() {
     {
       projectName: "NUS Data Science Competition 2021",
       projectLogo: NusStatisticsLogo,
-      projectDescription: "Created a model that automates supply chain tasks with Computer Vision algorithms (e.g. Feature Matching, Hough Transform, Thresholding). Team emerged as a finalist team, clinching the Top 10 position of the competition out of more than 260 teams.",
+      projectDescription: "Created a model that automates supply chain tasks with Computer Vision algorithms (e.g. Feature Matching, Hough Transform, Image Thresholding). Team emerged as a finalist team, clinching the Top 10 position of the competition out of more than 260 teams.",
       projectStack: "Python, opencv2",
       projectLink: "https://github.com/bryanwhl/nus-data-science-competition-2021",
       projectScreenshots: [NusStatisticsScreenshotOne, NusStatisticsScreenshotTwo]
@@ -207,7 +207,7 @@ function App() {
     {
       projectName: "Hack & Roll 2021 - Timetable Generator",
       projectLogo: NUSModsTimetableLogo,
-      projectDescription: "Built a web app that generates an optimized timetable for an NUS student based on his/her customization and preferences. Worked primary on the frontend of the application.",
+      projectDescription: "Built a web app that generates an optimized timetable for an NUS student based on his/her customization and preferences. Worked primarily on the frontend of the application.",
       projectStack: "HTML, CSS, Bootstrap, Python, Flask",
       projectLink: "https://devpost.com/software/nusmods-timetable-generator",
       projectScreenshots: [NUSModsTimetableLogo, NUSModsScreenshotOne]
