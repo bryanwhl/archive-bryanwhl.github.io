@@ -138,10 +138,10 @@ const HomeContainer = ({ loading }) => {
                           </ul>
                           <Typography variant="body2" color="text.secondary" component="div">
                             <br></br>
-                            Hi there! I’m a full stack developer with a keen passion in technlogy. I aim to make a difference in people’s lives through creating new technology that will benefit the world. I spend my free time working on software projects and on improving my technical skills. I'm also deeply interested in Computer Vision and Machine Learning, as well as UI/UX design to maximize the usability of applications that I develop. I strive for a career in Silicon Valley with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
+                            Hi there! I’m a full stack developer with a keen passion in technlogy. I aim to make a difference in people’s lives through creating new technology that will benefit the world. I spend my free time working on software projects and improving my technical skills. I'm also deeply interested in Computer Vision and Machine Learning, as well as UI/UX design to maximize the usability of applications that I develop. I strive for a career in Silicon Valley with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
                             <br></br>
                             <br></br>
-                            P.S. I'm at 90% progress with this site. Coding from scratch is not easy!
+                            P.S. This site is made from scratch using React and Material UI!
                           </Typography>
                         </CardContent>
                       </Grid>
