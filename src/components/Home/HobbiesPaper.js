@@ -75,7 +75,7 @@ const HobbiesPaper = () => {
   return (
     <Paper style={{backgroundColor: "#333533"}} elevation={0} flat>
       <Box display="flex" justifyContent="center" alignItems="center" id="projects" pt={6} mb={5}>
-        <Typography variant="h4" style={{ textDecoration: 'underline' }}>
+        <Typography variant="h4">
           Interests
         </Typography>
       </Box>
