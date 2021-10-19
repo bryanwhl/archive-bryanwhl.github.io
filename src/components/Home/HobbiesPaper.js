@@ -65,7 +65,7 @@ const HobbiesPaper = () => {
   const interests = [
     "Swim a lot",
     "Have a gym routine",
-    "Blog about food on <a href='https://instagram.com/bryanwhl_food'>instagram</a>",
+    "Blog about food on <a href='https://instagram.com/bryanwhl_food' style='color:orange'>instagram</a>",
     "Solve leetcode and programming challenges online",
     "Play the double bass and bass guitar",
     "Volunteer at charity and community events",
