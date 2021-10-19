@@ -25,7 +25,7 @@ const TopBar = () => {
   return (
     <div>
       <AppBar position="fixed">
-          <Toolbar className={classes.root}>
+          <Toolbar style={{backgroundColor: "#26547c"}} className={classes.root}>
             <Grid container spacing={1} alignItems="center" justify="flex-start" wrap="nowrap">
               <Button onClick={() => {history.push('/')}}>
                 <HomeIcon style={{ fontSize: 17 }} />
@@ -51,16 +51,16 @@ const TopBar = () => {
             <Hidden smDown>
               <Grid container spacing={1} alignItems="center" justify="flex-end" wrap="nowrap">
                 <IconButton href="https://www.github.com/bryanwhl">
-                  <GitHubIcon />
+                  <GitHubIcon style={{fill: "white"}} />
                 </IconButton>
                 <IconButton href="https://www.instagram.com/bryanwhl">
-                  <InstagramIcon />
+                  <InstagramIcon style={{fill: "white"}} />
                 </IconButton>
                 <IconButton href="https://www.linkedin.com/in/bryan-wong-91b323156/">
-                  <LinkedInIcon />
+                  <LinkedInIcon style={{fill: "white"}} />
                 </IconButton>
                 <IconButton href="https://www.facebook.com/bryanwhl1">
-                  <FacebookIcon />
+                  <FacebookIcon style={{fill: "white"}} />
                 </IconButton>
               </Grid>
             </Hidden>

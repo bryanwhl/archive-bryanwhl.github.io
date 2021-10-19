@@ -78,9 +78,9 @@ const SkillsPaper = () => {
   ]
 
   return (
-    <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-      <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
-        <Typography variant="h4" style={{ textDecoration: 'underline' }}>
+    <Paper style={{backgroundColor: "#333533"}} elevation={0} flat>
+      <Box pt={6} mb={5} display="flex" justifyContent="center" id="projects">
+        <Typography variant="h4">
           Skills
         </Typography>
       </Box>  
@@ -88,7 +88,7 @@ const SkillsPaper = () => {
         <Box width="80%">
           <Grid container className={classes.root}>
             <Grid container item xs={12} sm={12} md={6} lg={4} xl={4} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+              <Card className={classes.card} style={{backgroundColor: "#242423"}} elevation={3}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
                     <Typography variant="h6" style={{fontWeight: 600}}>
@@ -112,7 +112,7 @@ const SkillsPaper = () => {
               </Card>
             </Grid>
             <Grid container item xs={12} sm={12} md={6} lg={4} xl={4} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+              <Card className={classes.card} style={{backgroundColor: "#242423"}} elevation={3}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
                     <Typography variant="h6" style={{fontWeight: 600}}>
@@ -136,7 +136,7 @@ const SkillsPaper = () => {
               </Card>
             </Grid>
             <Grid container item xs={12} sm={12} md={6} lg={4} xl={4} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+              <Card className={classes.card} style={{backgroundColor: "#242423"}} elevation={3}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
                     <Typography variant="h6" style={{fontWeight: 600}}>
@@ -160,10 +160,10 @@ const SkillsPaper = () => {
               </Card>
             </Grid>
             <Grid container item xs={12} sm={12} md={6} lg={4} xl={4} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+              <Card className={classes.card} style={{backgroundColor: "#242423"}} elevation={3}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
+                    <Typography variant="h6" style={{fontWeight: 600, textAlign: "center"}}>
                       <StorageIcon style={{ fontSize: 18 }} />
                       &nbsp;&nbsp;API &amp; Database
                     </Typography>
@@ -184,10 +184,10 @@ const SkillsPaper = () => {
               </Card>
             </Grid>
             <Grid container item xs={12} sm={12} md={6} lg={4} xl={4} display="flex" justifyContent="center">
-              <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+              <Card className={classes.card} style={{backgroundColor: "#242423"}} elevation={3}>
                 <CardContent>
                   <Box display="flex" justifyContent="center">
-                    <Typography variant="h6" style={{fontWeight: 600}}>
+                    <Typography variant="h6" style={{fontWeight: 600, textAlign: "center"}} >
                       <AssignmentIcon style={{ fontSize: 18 }} />
                       &nbsp;DevOps / Management
                     </Typography>

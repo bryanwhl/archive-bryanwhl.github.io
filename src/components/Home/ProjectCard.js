@@ -48,7 +48,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <Grid item align="center" xs={12} md={6} lg={4}>
-      <Card className={classes.portfolioCards} style={{backgroundColor: '#d9feff'}}>
+      <Card className={classes.portfolioCards} style={{backgroundColor: "#242423"}}>
         <CardActionArea onClick={handleClickOpen}>
           <CardMedia
             className={classes.cardMedia}

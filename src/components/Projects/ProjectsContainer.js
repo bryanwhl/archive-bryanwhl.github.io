@@ -60,14 +60,13 @@ const ProjectsContainer = ({ data }) => {
       >
         <Box width="70%">
           <Grid item>
-              <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-                <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
-                  <Typography variant="h4" style={{ textDecoration: 'underline' }}>
+            <Fade in={true}>
+              <Paper style={{backgroundColor: "#333533"}} elevation={0} flat>
+                <Box pt={6} mb={5} display="flex" justifyContent="center" id="projects">
+                  <Typography variant="h4">
                     Projects
                   </Typography>
                 </Box>
-        
-                <Box pb={5} />
                 <Box display="flex" justifyContent="center">
                   <Box width="80%" display="flex" justifyContent="center">
                     <Grid container className={classes.root} display="flex" justifyContent="center">
@@ -76,20 +75,19 @@ const ProjectsContainer = ({ data }) => {
                     </Grid>
                   </Box>
                 </Box>
-                <Box pb={15} />
+                <Box pb={5} />
               </Paper>
-              
+            </Fade>
           </Grid>
           <Box mt={15} />
           <Grid item>
-              <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-                <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
-                  <Typography variant="h4" style={{ textDecoration: 'underline' }}>
+            <Fade in={true}>
+              <Paper style={{backgroundColor: "#333533"}} elevation={0} flat>
+                <Box pt={6} mb={5} display="flex" justifyContent="center" id="projects">
+                  <Typography variant="h4">
                     Hackathons
                   </Typography>
                 </Box>
-        
-                <Box pb={5} />
                 <Box display="flex" justifyContent="center">
                   <Box width="80%" display="flex" justifyContent="center">
                     <Grid container className={classes.root} display="flex" justifyContent="center">
@@ -98,8 +96,9 @@ const ProjectsContainer = ({ data }) => {
                     </Grid>
                   </Box>
                 </Box>
-                <Box pb={15} />
+                <Box pb={5} />
               </Paper>
+            </Fade>
           </Grid>
         </Box>
         <Box pb={15} />

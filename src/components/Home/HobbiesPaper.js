@@ -73,8 +73,8 @@ const HobbiesPaper = () => {
   ];
 
   return (
-    <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-      <Box display="flex" justifyContent="center" alignItems="center" id="projects" pt={10} mb={5}>
+    <Paper style={{backgroundColor: "#333533"}} elevation={0} flat>
+      <Box display="flex" justifyContent="center" alignItems="center" id="projects" pt={6} mb={5}>
         <Typography variant="h4" style={{ textDecoration: 'underline' }}>
           Interests
         </Typography>
@@ -108,7 +108,7 @@ const HobbiesPaper = () => {
               <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
                 <Grid container>
                   <Grid container item xs={12} sm={12} md={12} lg={6} display="flex" justifyContent="center">
-                    <Card className={classes.subCard} style={{backgroundColor: "#d3f2e5"}}>
+                    <Card className={classes.subCard} style={{backgroundColor: "#242423"}} elevation={3}>
                       <CardContent>
                         <Box display="flex" justifyContent="center">
                           <Typography variant="h6" style={{fontWeight: 600}}>
@@ -132,7 +132,7 @@ const HobbiesPaper = () => {
                     </Card>
                   </Grid>
                   <Grid container item xs={12} sm={12} md={12} lg={6} display="flex" justifyContent="center">
-                    <Card className={classes.subCard} style={{backgroundColor: "#d3f2e5"}}>
+                    <Card className={classes.subCard} style={{backgroundColor: "#242423"}} elevation={3}>
                       <CardContent>
                         <Box display="flex" justifyContent="center">
                           <Typography variant="h6" style={{fontWeight: 600}}>

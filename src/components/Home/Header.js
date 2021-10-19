@@ -50,6 +50,15 @@ const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 700,
   },
+  font: {
+    position: "absolute",
+    top: "35%",
+    width: "100%",
+    padding: 4,
+    textAlign: "center",
+    color: "white",
+    textDecoration: 'underline',
+  }
 }))
 
 const Header = () => {
@@ -58,20 +67,21 @@ const Header = () => {
   return (
     <div>
       <Box display="flex" justifyContent="center" paddingTop="60px" width="100%">
+        <Fade in={true}>
         <Card sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} className={classes.paper}>
           <CardContent>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Avatar src={AvatarImage} style={{ height: '160px', width: '160px', animationName: "mymove", animationDuration: 4 }} />
               <Box pt={2} />
-              <Typography style={{color:"#80ed99"}} variant="h5" component="div">
+              <Typography style={{color:"#e8eddf"}} variant="h5" component="div">
                 Hi, I'm Bryan,
               </Typography>
-              <Typography style={{color:"#80ed99"}} variant="h5" component="div">
+              <Typography style={{color:"#e8eddf"}} variant="h5" component="div">
                 a Full Stack Developer.
               </Typography>
               <Box paddingTop={3} />
               <a href={resumeLink} style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" download>
-                <Button variant="contained" color="secondary" style={{width: "100%"}}>
+                <Button variant="contained" color="secondary" style={{width: "100%", textTransform: "none"}}>
                   <Typography variant="body2">
                     Download Resume
                   </Typography>
@@ -95,10 +105,17 @@ const Header = () => {
                   </Hidden>
                 </Grid>
               </Box>
+
+              <Box paddingTop={3}>
+                <Typography style={{color:"#e8eddf", textAlign:"center"}} variant="subtitle2">
+                  Ambitious-natured, with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
+                </Typography>
+              </Box>
        
           </Box>
           </CardContent>
         </Card>
+        </Fade>
         <Box mb={90} />
       </Box>
     </div>

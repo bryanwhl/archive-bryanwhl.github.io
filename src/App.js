@@ -79,18 +79,22 @@ let customTheme = createTheme({
   palette: {
     primary: {
       // Grey
-      main: '#34a0a4',
+      main: '#242423',
     },
     secondary: {
       // Teal
-      main: '#b8f2e6',
+      main: '#ffd166',
     },
     background: {
       // Darker Grey
-      default: '#ffffff',
+      default: '#242423',
       // Not-as-dark Grey
-      paper: '#c9fbff'
+      paper: '#242423'
     },
+    text: {
+      primary: "#e8eddf"
+    },
+    mode: 'dark',
   },
   typography: {
     fontSize: 16,
@@ -101,7 +105,13 @@ let customTheme = createTheme({
       'Arial',
       'sans-serif'
     ].join(','),
-  }
+  },
+  shape: {
+    borderRadius: 20,
+  },
+  subColor: {
+    color: '#000000'  
+  },
 })
 
 customTheme = responsiveFontSizes(customTheme)
@@ -169,7 +179,7 @@ function App() {
       projectLogo: FacebookLogo,
       projectDescription: "(Ongoing Project) Working on a Machine Learning project with a group of 5 to predict comment volume of facebook posts based on a set of characteristic of the facebook post. Currently working on implementing Neural Networks and a Multilayer perceptron model using scikit-learn,  as well as to experiment with other models to maximize the accuracy of the prediction.",
       projectStack: "Python, scikit-learn, Keras, pandas, NumPy",
-      projectLink: "https://github.com/bryanwhl/facebook-comments",
+      projectLink: "https://archive.ics.uci.edu/ml/datasets/Facebook+Comment+Volume+Dataset",
       projectScreenshots: [FacebookScreenshotOne, FacebookScreenshotTwo]
     },
     {

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   dsoCardMedia: {
     width: '100%',
-    paddingTop: '66%', // 16:9
+    paddingTop: '57%', // 16:9
   },
   safCardMedia: {
     width: '100%',
@@ -86,20 +86,20 @@ const WorkSmall = () => {
     
           <Grid item>
             <Fade in={true}>
-              <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
+              <Paper style={{backgroundColor: "#333533"}} elevation={0} flat square>
                 <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
                   <Typography variant="h4" style={{ textDecoration: 'underline' }}>
                     Work Experience
                   </Typography>
                 </Box>
                 <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center">
-                <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+                <Card className={classes.card} style={{backgroundColor: "#242423"}}>
                   <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center" py={2}>
                     <Box width="80%">
                       <CardMedia className={classes.cardMedia} image={ProtosLabs} style={{ justifyContent: "center", display: "flex" }} />
                     </Box>
                     <Box>
-                      <CardHeader title="Protos Labs" subheader="Aug 2021 - Dec 2021" />
+                      <CardHeader title="Protos Labs" subheader={<Typography>Aug 2021 - Dec 2021</Typography>} />
                     </Box>
                   </Box>
                   <CardContent>
@@ -118,13 +118,13 @@ const WorkSmall = () => {
                     </Box>
                   </CardContent>
                 </Card>
-                <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+                <Card className={classes.card} style={{backgroundColor: "#242423"}}>
                   <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center" py={2}>
                     <Box width="80%">
                       <CardMedia className={classes.dsoCardMedia} image={DSO} style={{ justifyContent: "center", display: "flex" }} />
                     </Box>
                     <Box>
-                      <CardHeader title="DSO National Laboratories" subheader="May 2021 - July 2021" />
+                      <CardHeader title="DSO National Laboratories" subheader={<Typography>May 2021 - July 2021</Typography>} />
                     </Box>
                   </Box>
                   <CardContent>
@@ -143,13 +143,13 @@ const WorkSmall = () => {
                     </Box>
                   </CardContent>
                 </Card>
-                <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+                <Card className={classes.card} style={{backgroundColor: "#242423"}}>
                   <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center" py={2}>
                     <Box width="70%">
                       <CardMedia className={classes.safCardMedia} image={SAF} />
                     </Box>
                     <Box>
-                      <CardHeader title="Singapore Armed Forces (Conscription)" subheader="Apr 2018 - Apr 2020" />
+                      <CardHeader title="Singapore Armed Forces (Conscription)" subheader={<Typography>Apr 2018 - Apr 2020</Typography>} />
                     </Box>
                   </Box>
                   <CardContent>

@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(3),
-    width: "100%"
+    width: "70%"
   },
   innerPaper: {
     padding: theme.spacing(5),
@@ -65,7 +65,7 @@ const ProjectSection = ( { project } ) => {
                     Description:
                   </Typography>
                   <br></br>
-                  <Typography variant="subtitle1">
+                  <Typography variant="subtitle2">
                     {ReactHtmlParser(project.projectDescription)}
                   </Typography>
                 </Grid>
@@ -74,14 +74,14 @@ const ProjectSection = ( { project } ) => {
                 <Typography variant="h5">
                   Tech Stack:
                 </Typography>
-                <Typography variant="subtitle1">
+                <Typography variant="subtitle2">
                   {ReactHtmlParser(project.projectStack)}
                 </Typography>
               </Grid>
               <br></br>
               <br></br>
               {project.projectLink !== '' ? <Grid item>
-                <Button variant="contained" color="primary" href={project.projectLink}>
+                <Button variant="contained" color="secondary" style={{textTransform: "none"}} href={project.projectLink}>
                   <Typography variant="subtitle2">
                     Visit Project Here!
                   </Typography>

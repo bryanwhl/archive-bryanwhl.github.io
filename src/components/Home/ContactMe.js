@@ -66,14 +66,14 @@ const ContactMe = () => {
   }
 
   return (
-    <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-      <Box display="flex" justifyContent="center" alignItems="center" id="projects" pt={10} mb={5}>
-        <Typography variant="h4" style={{ textDecoration: 'underline' }}>
+    <Paper style={{backgroundColor: "#333533"}} elevation={0} flat>
+      <Box display="flex" justifyContent="center" alignItems="center" id="projects" pt={6} mb={5}>
+        <Typography variant="h4">
           Contact Me
         </Typography>
       </Box>
       <Box display="flex" justifyContent="center">
-        <Box width="57vmin">
+        <Box width="54%">
           <List>
             <ListItem>
               <ListItemAvatar>
@@ -81,12 +81,12 @@ const ContactMe = () => {
                   <EmailIcon />
                 </Avatar>
               </ListItemAvatar>
-              <Hidden mdDown>
+              <Hidden smDown>
                 <ListItemText
                   primary="bryanwhl1999@gmail.com"
                 />
               </Hidden>
-              <Hidden lgUp>
+              <Hidden mdUp>
                 <ListItemText
                   primary="Email"
                 />
@@ -98,7 +98,7 @@ const ContactMe = () => {
                 <ListItemSecondaryAction>
                   <Tooltip title={copy === 1 ? "Copied!" : "Copy"} aria-label="add">
                     <IconButton edge="end" aria-label="delete">
-                      <CropPortraitIcon />
+                      <CropPortraitIcon style={{fill: "white"}} />
                     </IconButton>
                   </Tooltip>
                 </ListItemSecondaryAction>
@@ -110,12 +110,12 @@ const ContactMe = () => {
                   <PhoneIphoneIcon />
                 </Avatar>
               </ListItemAvatar>
-              <Hidden mdDown>
+              <Hidden smDown>
                 <ListItemText
                   primary="+65 9385 8356"
                 />
               </Hidden>
-              <Hidden lgUp>
+              <Hidden mdUp>
                 <ListItemText
                   primary="Contact"
                 />
@@ -127,7 +127,7 @@ const ContactMe = () => {
                 <ListItemSecondaryAction>
                   <Tooltip title={copy === 2 ? "Copied!" : "Copy"} aria-label="add">
                     <IconButton edge="end" aria-label="delete">
-                      <CropPortraitIcon />
+                      <CropPortraitIcon style={{fill: "white"}} />
                     </IconButton>
                   </Tooltip>
                 </ListItemSecondaryAction>
@@ -136,7 +136,7 @@ const ContactMe = () => {
           </List>
         </Box>
       </Box>
-      <Box pb={10} />
+      <Box pb={5} />
       <Box display="flex" justifyContent="center">
         <Typography variant="body2">
           <CopyrightIcon style={{ textDecoration: 'bold', fontSize: 15 }} />

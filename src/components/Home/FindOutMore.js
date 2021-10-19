@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "35%",
     width: "100%",
+    padding: 4,
     textAlign: "center",
     color: "white",
     textDecoration: 'underline',
@@ -105,9 +106,9 @@ const FindOutMore = () => {
   
 
   return (
-    <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-      <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
-        <Typography variant="h4" style={{ textDecoration: 'underline' }}>
+    <Paper style={{backgroundColor: "#333533"}} elevation={0} flat>
+      <Box pt={6} mb={5} display="flex" justifyContent="center" id="projects">
+        <Typography variant="h4">
           Find out more!
         </Typography>
       </Box>

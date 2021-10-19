@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "35%",
     width: "100%",
+    padding: 4,
     textAlign: "center",
     color: "white",
     textDecoration: 'underline',
@@ -52,7 +53,7 @@ const ProjectCard = ({ project }) => {
         <Grid container item xs={12} sm={12} md={12} lg={6} xl={4} display="flex" justifyContent="center">
           <Card 
             className={classes.card} 
-            style={{backgroundColor: "#d3f2e5"}}
+            style={{backgroundColor: "#242423"}}
             classes={{root: state.raised ? classes.cardHovered : ""}}
             onMouseOver={()=>setState({ raised: true, shadow:3})} 
             onMouseOut={()=>setState({ raised:false, shadow:1 })} 
@@ -72,7 +73,7 @@ const ProjectCard = ({ project }) => {
                 {project.projectName}
               </Typography>
             </CardActionArea>
-            <Dialog fullWidth maxWidth='lg' onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+            <Dialog maxWidth='md' onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
               <ProjectSection project={project} handleClose={handleClose} />
             </Dialog>
           </Card>

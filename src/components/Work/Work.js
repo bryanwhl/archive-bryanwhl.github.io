@@ -15,7 +15,7 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    maxWidth: "50vmin",
+    maxWidth: "60vmin",
     position: "relative",
     margin: 10
   },
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   dsoCardMedia: {
     width: '100%',
-    paddingTop: '66%', // 16:9
+    paddingTop: '57%', // 16:9
   },
   safCardMedia: {
     width: '100%',
@@ -96,9 +96,9 @@ const Work = () => {
         <Box width="70%">
           <Grid item>
             <Fade in={true}>
-              <Paper style={{backgroundColor: "#f7fffe"}} elevation={0} flat square>
-                <Box pt={10} mb={5} display="flex" justifyContent="center" id="projects">
-                  <Typography variant="h4" style={{ textDecoration: 'underline' }}>
+              <Paper style={{backgroundColor: "#333533"}} elevation={0} flat>
+                <Box pt={6} mb={5} display="flex" justifyContent="center" id="projects">
+                  <Typography variant="h4">
                     Work Experience
                   </Typography>
                 </Box>
@@ -106,7 +106,7 @@ const Work = () => {
                   <TimelineItem>
                     <TimelineOppositeContent className={classes.oppositeContent} />
                     <TimelineSeparator>
-                      <TimelineDot />
+                      <TimelineDot color="secondary"/>
                       <TimelineConnector />
                     </TimelineSeparator>
                     <Fade in={true}>
@@ -115,7 +115,7 @@ const Work = () => {
                         Protos Labs
                         </Typography>
                         Aug 2021 - Dec 2021
-                        <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+                        <Card className={classes.card} style={{backgroundColor: "#242423"}}>
                           <Box display="flex" justifyContent="center" py={2}>
                             <Box width="80%">
                               <CardMedia className={classes.cardMedia} image={ProtosLabs} style={{ justifyContent: "center", display: "flex" }} />
@@ -143,7 +143,7 @@ const Work = () => {
                   <TimelineItem>
                     <TimelineOppositeContent className={classes.oppositeContent} />
                     <TimelineSeparator>
-                      <TimelineDot color="primary" />
+                      <TimelineDot color="secondary" />
                       <TimelineConnector />
                     </TimelineSeparator>
                     <TimelineContent>
@@ -151,7 +151,7 @@ const Work = () => {
                       DSO National Laboratories
                       </Typography>
                       May 2021 - July 2021
-                      <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+                      <Card className={classes.card} style={{backgroundColor: "#242423"}}>
                         <Box display="flex" justifyContent="center" py={2}>
                           <Box width="80%">
                             <CardMedia className={classes.dsoCardMedia} image={DSO} style={{ justifyContent: "center", display: "flex" }} />
@@ -186,7 +186,7 @@ const Work = () => {
                       Singapore Armed Forces (Conscription)
                       </Typography>
                       Apr 2018 - Apr 2020
-                      <Card className={classes.card} style={{backgroundColor: "#d3f2e5"}}>
+                      <Card className={classes.card} style={{backgroundColor: "#242423"}}>
                         <Box display="flex" justifyContent="center" py={2}>
                           <Box width="70%">
                             <CardMedia className={classes.safCardMedia} image={SAF} />
