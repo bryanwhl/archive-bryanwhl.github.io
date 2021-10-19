@@ -99,7 +99,7 @@ const WorkSmall = () => {
                       <CardMedia className={classes.cardMedia} image={ProtosLabs} style={{ justifyContent: "center", display: "flex" }} />
                     </Box>
                     <Box>
-                      <CardHeader title="Protos Labs" subheader={<Typography>Aug 2021 - Dec 2021</Typography>} />
+                      <CardHeader title={<Typography variant="h4" style={{textAlign: "center"}}>Protos Labs</Typography>} subheader={<Typography variant="subtitle2" style={{textAlign: "center"}}>Aug 2021 - Dec 2021</Typography>} />
                     </Box>
                   </Box>
                   <CardContent>
@@ -124,7 +124,7 @@ const WorkSmall = () => {
                       <CardMedia className={classes.dsoCardMedia} image={DSO} style={{ justifyContent: "center", display: "flex" }} />
                     </Box>
                     <Box>
-                      <CardHeader title="DSO National Laboratories" subheader={<Typography>May 2021 - July 2021</Typography>} />
+                      <CardHeader title={<Typography variant="h4" style={{textAlign: "center"}}>DSO National Laboratories</Typography>} subheader={<Typography variant="subtitle2" style={{textAlign: "center"}}>May 2021 - July 2021</Typography>} />
                     </Box>
                   </Box>
                   <CardContent>
@@ -149,7 +149,7 @@ const WorkSmall = () => {
                       <CardMedia className={classes.safCardMedia} image={SAF} />
                     </Box>
                     <Box>
-                      <CardHeader title="Singapore Armed Forces (Conscription)" subheader={<Typography>Apr 2018 - Apr 2020</Typography>} />
+                      <CardHeader title={<Typography variant="h4" style={{textAlign: "center"}}>Singapore Armed Forces (Conscription)</Typography>} subheader={<Typography variant="subtitle2" style={{textAlign: "center"}}>Apr 2018 - Apr 2020</Typography>} />
                     </Box>
                   </Box>
                   <CardContent>

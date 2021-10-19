@@ -6,15 +6,14 @@ import ReactHtmlParser from 'react-html-parser';
 
 const useStyles = makeStyles((theme) => ({
   image: {
-    width: 128,
-    height: 128,
+    width: "50%",
+    height: "50%",
   },
   paper: {
-    padding: theme.spacing(3),
     width: "70%"
   },
   innerPaper: {
-    padding: theme.spacing(5),
+    padding: theme.spacing(3),
     width: "100%"
   },
   divider: {

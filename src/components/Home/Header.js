@@ -73,10 +73,10 @@ const Header = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Avatar src={AvatarImage} style={{ height: '160px', width: '160px', animationName: "mymove", animationDuration: 4 }} />
               <Box pt={2} />
-              <Typography style={{color:"#e8eddf"}} variant="h5" component="div">
+              <Typography style={{color:"#e8eddf", textAlign: "center"}} variant="h5" component="div">
                 Hi, I'm Bryan,
               </Typography>
-              <Typography style={{color:"#e8eddf"}} variant="h5" component="div">
+              <Typography style={{color:"#e8eddf", textAlign: "center"}} variant="h5" component="div">
                 a Full Stack Developer.
               </Typography>
               <Box paddingTop={3} />
@@ -106,7 +106,7 @@ const Header = () => {
                 </Grid>
               </Box>
 
-              <Box paddingTop={3}>
+              <Box paddingTop={3} width="55vmin">
                 <Typography style={{color:"#e8eddf", textAlign:"center"}} variant="subtitle2">
                   Ambitious-natured, with the goal of driving innovations in the tech field together with like-minded entrepreneurs and tech enthusiasts.
                 </Typography>

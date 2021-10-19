@@ -73,7 +73,7 @@ const ContactMe = () => {
         </Typography>
       </Box>
       <Box display="flex" justifyContent="center">
-        <Box width="54%">
+        <Box width="50vmin">
           <List>
             <ListItem>
               <ListItemAvatar>

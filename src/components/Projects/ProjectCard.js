@@ -1,7 +1,8 @@
 import React from 'react'
 import ProjectSection from "./ProjectSection.js"
-import { Card, CardActionArea, Grid, Dialog, withStyles, Paper, Fade, Typography, Box, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
+import { Card, CardActionArea, Grid, Dialog, withStyles, Paper, Fade, IconButton, Typography, Box, DialogTitle, Container, makeStyles, Divider, CardMedia } from '@material-ui/core';
 import Header from "../Home/Header.js"
+import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   font: {
     position: "absolute",
-    top: "35%",
+    top: "30%",
     width: "100%",
     padding: 4,
     textAlign: "center",
@@ -73,7 +74,16 @@ const ProjectCard = ({ project }) => {
                 {project.projectName}
               </Typography>
             </CardActionArea>
-            <Dialog maxWidth='md' onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+            <Dialog maxWidth='lg' onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+              <DialogTitle id="id">
+                <Box display="flex" alignItems="center">
+                  <Box>
+                    <IconButton onClick={handleClose}>
+                      <CloseIcon style={{fill: "white"}} />
+                    </IconButton>
+                  </Box>
+                  </Box>
+                </DialogTitle>
               <ProjectSection project={project} handleClose={handleClose} />
             </Dialog>
           </Card>
