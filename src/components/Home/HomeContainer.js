@@ -61,7 +61,7 @@ const DarkTextTypography = withStyles({
   }
 })(Typography);
 
-const HomeContainer = ({ loading }) => {
+const HomeContainer = ({ data, loading }) => {
   const classes = useStyles()
 
   React.useEffect(() => {

@@ -15,7 +15,7 @@ import {
 import BackgroundImage from "./images/background.jpg"
 import HomeContainer from "./components/Home/HomeContainer.js"
 import ProjectsContainer from "./components/Projects/ProjectsContainer.js"
-import WorkParent from "./components/Work/WorkParent.js"
+import WorkContainer from "./components/Work/WorkContainer.js"
 import ComingSoon from "./components/ComingSoon.js"
 import Loader from "react-loader-spinner";
 
@@ -75,6 +75,11 @@ import RC4WelfareScreenshotTwo from "./images/rc4welfare/rc4welfare-ss2.png"
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import React from 'react'
 
+// Past company logos import
+import DSO from "./images/dsotransparent.png"
+import ProtosLabs from "./images/protoslabs.png"
+import SAF from "./images/saf.png"
+
 let customTheme = createTheme({
   palette: {
     primary: {
@@ -121,7 +126,19 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
     maxHeight: "101vh",
     backgroundImage: `url(${BackgroundImage})`
-  }
+  },
+  protoslabsCardMedia: {
+    width: '100%',
+    paddingTop: '84%', // 16:9
+  },
+  dsoCardMedia: {
+    width: '100%',
+    paddingTop: '57%', // 16:9
+  },
+  safCardMedia: {
+    width: '100%',
+    paddingTop: '108%', // 16:9
+  },
 }))
 
 const styles = {
@@ -221,7 +238,60 @@ function App() {
       projectStack: "HTML, CSS, Bootstrap, Python, Flask",
       projectLink: "https://devpost.com/software/nusmods-timetable-generator",
       projectScreenshots: [NUSModsTimetableLogo, NUSModsScreenshotOne]
-    }]
+    }],
+    work: [
+      {
+        companyName: "Protos Labs",
+        date: "Aug 2021 - Dec 2021",
+        companyLogo: ProtosLabs,
+        logoStyles: classes.protoslabsCardMedia,
+        description: [
+          "Worked alongside 2 cofounders in a pre-seed stage Cybersecurity startup doing web development, backend development and architecture development",
+          "Worked with various AWS technologies to implement authentication, microservices and to automate workflows",
+          "Worked on React and Redux to develop the frontend user interface of the product",
+          "Worked on solving diverse challenges and problems, including algorithmic problems and Machine Learning problems"
+        ]
+      },
+      {
+        companyName: "DSO National Laboratories",
+        date: "May 2021 - July 2021",
+        companyLogo: DSO,
+        logoStyles: classes.dsoCardMedia,
+        description: [
+          "Built a full Search Engine user interface with Vue.js, Vuex store and Vuetify library",
+          "Built a dockerized microservice that provides functionality for Video and Audio transcription using Node.js, Express.js, HTTP requests and REST APIs",
+          "Worked with Elasticsearch and Java for the system’s backend",
+          "Built a dashboard that charts the metric of a Docker container with Prometheus and Grafana"
+        ]
+      },
+      {
+        companyName: "Singapore Armed Forces (Conscription)",
+        date: "Apr 2018 - Apr 2020",
+        companyLogo: SAF,
+        logoStyles: classes.safCardMedia,
+        description: [
+          "Built a telegram bot that serves more than 500 daily users, providing functionality for checking canteen menu daily",
+          "Explored and tested Computer Vision algorithms for image processing and noise removal, followed by using tesseract OCR for text extraction",
+          "Worked on the backend of a web application that provides navigation functionality on a map",
+          "Automated processes and workflows on Microsoft Excel using VBA"
+        ]
+      }
+    ],
+    leadership: [
+      "Founded a LeetCode and Programming club in College, with about 10 weekly attendees",
+      "Vice-President of Engineering Scholars Programme Committee",
+      "Vice-President of College Student Committee (IT Committee)",
+      "Project Head of Technology Community, OrcaTech, in college",
+    ],
+    interests: [
+      "Swim a lot",
+      "Have a gym routine",
+      "Blog about food on <a href='https://instagram.com/bryanwhl_food' style='color:orange'>instagram</a>",
+      "Solve leetcode and programming challenges online",
+      "Play the double bass and bass guitar",
+      "Volunteer at charity and community events",
+      "Play League Of Legends"
+    ]
   }
 
   return loading === true ? (
@@ -246,10 +316,10 @@ function App() {
                 <ProjectsContainer data={data}/>
               </Route>
               <Route path="/work">
-                <WorkParent />
+                <WorkContainer data={data} />
               </Route>
               <Route path="/">
-                <HomeContainer loading={loading}/>
+                <HomeContainer data={data} loading={loading}/>
               </Route>
             </Switch>
           </ThemeProvider>
